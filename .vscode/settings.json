@@ -1,0 +1,33 @@
+{
+  "workbench.sideBar.location": "left",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "window.zoomLevel": -1,
+  "liveshare.accessibility.accessibilityFeaturesEnabled": "auto",
+  "editor.defaultFormatter": "vscode.json-language-features",
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "files.associations": {
+    "*.ts": "typescriptreact"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "eslint.rules.customizations": [],
+  "eslint.useFlatConfig": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "chat.mcp.gallery.enabled": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "builder.serverUrl": "http://localhost:3000/",
+  "builder.command": "npm run dev",
+  "builder.openInBrowser": true
+}
