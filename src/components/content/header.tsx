@@ -75,7 +75,7 @@ const Header: NextPage = () => {
 
       {/* Language & Search */}
       <div className="flex items-center justify-center gap-4">
-        <button className="rounded-num-999 bg-whitesmoke flex items-center justify-center py-2.5 px-num-16 gap-2 hover:bg-gray-200 transition-colors">
+        <button className="rounded-num-999 bg-whitesmoke flex items-center justify-center py-2.5 px-2.5 gap-2 hover:bg-gray-200 transition-colors">
           <Search01Icon width={24} height={24} />
         </button>
 
