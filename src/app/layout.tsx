@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import localFont from "next/font/local";
+
+
+
+
+const pelak = localFont({
+  src: "./fonts/PelakFA-Black.ttf",
+  variable: "--font-pelak",
+  display: "swap",
+  weight: "900",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="fa" className={` ${pelak.variable}`}>
+      <body className={` ${pelak.className}`}>
         {children}
       </body>
     </html>
