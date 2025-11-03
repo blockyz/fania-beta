@@ -1,17 +1,5 @@
 # .github/workflows/unlock-ci-on-approval.yml
-name: Unlock CI on Approval
-
-on:
-  pull_request_review:
-    types: [submitted]
-
-jobs:
-  unlock:
-    if: github.event.review.state == 'approved'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Add 'ci-unlocked' label to PR
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr edit ${{ github.event.pull_request.number }} --add-label "ci-unlocked"
+- name: Unlock CI on Approval
+  run: gh pr edit ${{ github.event.pull_request.number }} --add-label "ci-unlocked" --repo ${{ github.repository }}
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
