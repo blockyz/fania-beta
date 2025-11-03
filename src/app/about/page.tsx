@@ -12,8 +12,8 @@ const AboutPage = () => {
   const featureCards = getAboutFeatureCards()
 
   const metadata = {
-    title: `${FA_DICTIONARY.aboutUs} `,
-    description: `${FA_DICTIONARY.aboutUs}`,
+    title: FA_DICTIONARY.aboutUs,
+    description: FA_DICTIONARY.aboutUs,
   }
 
   return (
