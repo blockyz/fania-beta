@@ -1,0 +1,16 @@
+name: Unlock CI on Approval
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  unlock:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add 'ci-unlocked' label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} --add-label "ci-unlocked"
