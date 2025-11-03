@@ -4,6 +4,8 @@ const FA_DICTIONARY: TDictionary = {
   scrollDown: 'به سمت پایین اسکرول کنید',
   successfulProjects: 'پروژه موفق',
   products: 'محصول',
-  articles: 'مقاله'
+  articles: 'مقاله',
+  aboutUs: 'درباره ما',
+
 }
 export default FA_DICTIONARY

@@ -5,11 +5,16 @@ import AboutCard from '@/components/card/about-card'
 import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFeatureCards } from '@/lib/data'
 import FA_DICTIONARY from '@/lib/dictionary/fa'
 
-const page = () => {
+const AboutPage = () => {
   const heroData = getAboutHeroData()
   const middleData = getAboutMiddleData()
   const featuresData = getAboutFeaturesData()
   const featureCards = getAboutFeatureCards()
+
+  const metadata = {
+    title: `${FA_DICTIONARY.aboutUs} `,
+    description: `${FA_DICTIONARY.aboutUs}`,
+  }
 
   return (
     <div className='flex flex-col items-center gap-12 ' dir='rtl'>
@@ -82,4 +87,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AboutPage
