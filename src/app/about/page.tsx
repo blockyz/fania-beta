@@ -3,7 +3,7 @@ import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowDownDoubleIcon, UserGroupIcon } from '@hugeicons/core-free-icons'
 import AboutCard from '@/components/card/about-card'
 import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFeatureCards } from '@/lib/data'
-import FA_DICTIONARY from '@/lib/dictionary/fa'
+import { translate } from '@/lib/helper'
 
 const AboutPage = () => {
   const heroData = getAboutHeroData()
@@ -12,8 +12,8 @@ const AboutPage = () => {
   const featureCards = getAboutFeatureCards()
 
   const metadata = {
-    title: FA_DICTIONARY.aboutUs,
-    description: FA_DICTIONARY.aboutUs,
+    title: translate('aboutUs'),
+    description: translate('aboutUs'),
   }
 
   return (
@@ -34,7 +34,7 @@ const AboutPage = () => {
                   {stat.value}
                 </div>
                 <div className='font-pelak text-[14px] leading-5 text-black'>
-                  {FA_DICTIONARY[stat.labelKey]}
+                  {translate(stat.labelKey)}
                 </div>
               </div>
             ))}
@@ -43,7 +43,7 @@ const AboutPage = () => {
 
         <div className='absolute bottom-0 left-0 right-0 h-[104px] rounded-b-[40px] flex items-center justify-center gap-2 font-pelak text-[14px] text-whitesmoke' style={{ background: 'linear-gradient(180deg, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 100%)' }}>
           <HugeiconsIcon icon={ArrowDownDoubleIcon} size={20} color="currentColor" strokeWidth={2} />
-          {FA_DICTIONARY.scrollDown}
+          {translate('scrollDown')}
           <HugeiconsIcon icon={ArrowDownDoubleIcon} size={20} color="currentColor" strokeWidth={2} />
         </div>
       </div>
