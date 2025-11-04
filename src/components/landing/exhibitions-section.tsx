@@ -1,4 +1,4 @@
-import FA_DICTIONARY from '@/lib/dictionary/fa'
+import { translate } from '@/lib/helper'
 import { getExhibitions } from '@/lib/data'
 import ExhibitionCard from './exhibition-card'
 
@@ -10,10 +10,10 @@ export default function ExhibitionsSection() {
       {/* Section Header */}
       <div className="flex flex-col items-end gap-1 mb-10">
         <h2 className="font-pelak text-[24px] font-bold leading-[24px] text-black">
-          {FA_DICTIONARY.Exhibitions}
+          {translate('Exhibitions')}
         </h2>
         <p className="font-pelak text-[24px] font-bold leading-[26px] text-darkgray">
-          {FA_DICTIONARY.RecentOpenings}
+          {translate('RecentOpenings')}
         </p>
       </div>
 
