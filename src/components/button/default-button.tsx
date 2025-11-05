@@ -1,11 +1,10 @@
+
 import React from 'react';
 
 interface Props {
   size: 'sm' | 'md' | 'lg';
-  bg: string;
-  textColor: string;
   text: string;
-  borderColor?: string;
+  textClassName?: string;
   className?: string;
   onClick?: () => void;
   leftIcon?: React.ReactNode;
@@ -13,23 +12,15 @@ interface Props {
 }
 
 const sizes = {
-  sm: 'min-w-[122px] h-[40px] text-sm',
-  md: 'min-w-[130px] h-[48px] text-base',
-  lg: 'min-w-[130px] h-[56px] text-lg',
-};
-
-const radius = {
-  sm: 'rounded-md',
-  md: 'rounded-lg',
-  lg: 'rounded-xl',
+  sm: 'min-w-[122px] h-[40px] text-sm px-3',
+  md: 'min-w-[130px] h-[48px] text-base px-4',
+  lg: 'min-w-[130px] h-[56px] text-lg px-5',
 };
 
 export const Button = ({
   size,
-  bg,
-  textColor,
   text,
-  borderColor,
+  textClassName = 'text-white',
   className = '',
   onClick,
   leftIcon,
@@ -42,8 +33,9 @@ export const Button = ({
     <button
       onClick={onClick}
       className={`
-        ${sizes[size]} ${radius[size]} ${bg} ${borderColor} ${className}
-        font-medium flex items-center justify-center px-4
+        ${sizes[size]} 
+        ${className}
+        font-medium flex items-center justify-center transition-all
       `}
     >
       {hasLeft && (
@@ -51,9 +43,11 @@ export const Button = ({
           {leftIcon}
         </span>
       )}
-      <span className={textColor}>{text}</span>
+      <span className={textClassName}>{text}</span>
       {hasRight && (
-        <span className="w-6 h-6 ml-2">{rightIcon}</span>
+        <span className="w-6 h-6 ml-2">
+          {rightIcon}
+        </span>
       )}
     </button>
   );
