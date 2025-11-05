@@ -1,5 +1,5 @@
 
 export default function Home() {
 
-  return (<p>parsa</p>);
+  return (<h1 className="font-pelak">parsa</h1>);
 }
