@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 
 
 const pelak = localFont({
-  src: "./fonts/PelakFA-Black.ttf",
+  src: "../../public/fonts/PelakFA-Black.ttf",
   variable: "--font-pelak",
   display: "swap",
   weight: "900",
