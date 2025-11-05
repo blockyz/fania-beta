@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/button/default-button';
-
+import { Button } from '../button/default-button';
+import { translate } from '@/lib/helper';
 export default function ProductCard() {
   return (
     <div className="w-[1360px] h-[413px] bg-gray-100 flex justify-between items-start">
@@ -12,18 +11,18 @@ export default function ProductCard() {
         <div className="mb-6 text-end">
           <h2>
             <span className="block text-xl font-bold text-gray-900 leading-tight">
-              به معرفی کوتاه درباره مرکز و هدف فعالیت
+              {translate('ProductCard_Title_1')}
             </span>
             <span className="block text-xl font-bold text-gray-500 mt-[4px] leading-tight">
-              های خودش در چند سال اخیر
+              {translate('ProductCard_Title_2')}
             </span>
           </h2>
         </div>
         <div className="flex-1 mt-[28px] overflow-hidden">
           <p className="text-sm text-gray-600 text-right space-y-1.5 leading-none">
-            <span className="block">توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما
-توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما</span>
-            
+            <span className="block">
+              {translate('ProductCard_Description')}
+            </span>
           </p>
         </div>
 
@@ -32,7 +31,7 @@ export default function ProductCard() {
             size="md"
             bg="bg-purple-600"
             textColor="text-white"
-            text="درباره ما بیشتر بدانید"
+            text={translate('ProductCard_Button')}
             borderColor="border border-purple-600"
           />
         </div>
