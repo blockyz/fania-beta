@@ -1,4 +1,6 @@
+import ProductsCategory from "./_components/products-category";
 
 export default function Home() {
-  return (<p>parsa</p>);
+  return (<div className="flex flex-col gap-4"  > <ProductsCategory />
+  </div>);
 }
