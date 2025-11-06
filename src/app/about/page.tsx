@@ -1,7 +1,7 @@
 import React from 'react'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowDownDoubleIcon, UserGroupIcon } from '@hugeicons/core-free-icons'
-import AboutCard from '@/components/card/about-card'
+import AboutCard from '@/app/about/components/about-card'
 import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFeatureCards } from '@/lib/data'
 import { translate } from '@/lib/helper'
 
