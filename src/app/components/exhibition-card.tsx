@@ -1,7 +1,7 @@
 'use client'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowUp01Icon } from '@hugeicons/core-free-icons'
-import { Exhibition } from '@/lib/data'
+import { Exhibition } from '@/lib/types/index'
 import { translate } from '@/lib/helper'
 import TertiaryButton from '@/components/button/tertiary-button'
 
@@ -35,9 +35,8 @@ export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {
       <div className="w-[378px] h-[78px] flex items-start text-left">
         <p className="font-pelak text-[16px] font-medium leading-[26px] text-gray">
           {exhibition.description}{' '}
-          <TertiaryButton className="inline-flex items-center gap-1 text-darkgray text-[14px] font-normal leading-5">
+          <TertiaryButton rightIcon={<HugeiconsIcon icon={ArrowUp01Icon} size={16} className="text-darkgray" strokeWidth={2} />}>
             {translate('ReadMore')}
-            <HugeiconsIcon icon={ArrowUp01Icon} size={16} className="text-darkgray" strokeWidth={2} />
           </TertiaryButton>
         </p>
       </div>
