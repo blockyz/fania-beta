@@ -1,0 +1,34 @@
+// src/data/certifications.ts
+
+export interface Certification {
+  id: string
+  title: string
+  image: string
+}
+
+const certifications: Certification[] = [
+  {
+    id: "1",
+    title: "مدرک دانشگاه هاروارد",
+    image: "/images/cert-1.jpg",
+  },
+  {
+    id: "2",
+    title: "مدرک دانشگاه هاروارد",
+    image: "/images/cert-2.jpg",
+  },
+  {
+    id: "3",
+    title: "مدرک دانشگاه هاروارد",
+    image: "/images/cert-3.jpg",
+  },
+  {
+    id: "4",
+    title: "مدرک دانشگاه هاروارد",
+    image: "/images/cert-4.jpg",
+  },
+]
+
+export const getCertifications = (): Certification[] => {
+  return certifications
+}
