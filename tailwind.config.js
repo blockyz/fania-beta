@@ -1,9 +1,8 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  "content": [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   "theme": {
     "extend": {
@@ -21,31 +20,30 @@ module.exports = {
         "darkgray": "#afafaf",
         "lightsteelblue": "#cbcdff",
       },
-      "fontFamily": {
-        "pelak": "Pelak",
-        "inter": "Inter"
+      fontFamily: {
+        pelak: ["var(--font-pelak)"],        
       },
-      "borderRadius": {
-        "num-999": "999px"
+      borderRadius: {
+        "num-999": "999px",
       },
-      "padding": {
-        "num-16": "16px"
-      }
+      padding: {
+        "num-16": "16px",
+      },
     },
-    "fontSize": {
+    fontSize: {
       "num-14": "14px",
-      "num-16": "16px"
+      "num-16": "16px",
     },
-    "lineHeight": {
+    lineHeight: {
       "num-20": "20px",
-      "num-22": "22px"
+      "num-22": "22px",
     },
-    "letterSpacing": {
+    letterSpacing: {
       "num--0_16": "-0.16px",
-      "num--0_18": "-0.18px"
-    }
+      "num--0_18": "-0.18px",
+    },
   },
-  "corePlugins": {
-    "preflight": false
-  }
-}
+  corePlugins: {
+    preflight: false,
+  },
+};
