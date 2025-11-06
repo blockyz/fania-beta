@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Button } from './default-button';
+import { IButtonProps } from '@/lib/types';
 
-const TertiaryButton = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+export const TertiaryButton = ({ className, ...props }: IButtonProps) => {
   return (
-    <button className={`${className}`}>
-      {children}
-    </button>
-  )
-}
-
-export default TertiaryButton
+    <Button
+      {...props}
+      className={`bg-transparent text-primary hover:bg-tertiary-hover-bg hover:text-primary-hover active:bg-tertiary-active-bg active:text-primary-active disabled:text-primary-disabled disabled:cursor-not-allowed ${className}`}
+    />
+  );
+};

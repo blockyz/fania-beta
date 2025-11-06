@@ -1,3 +1,5 @@
+import aboutData from './about.json'
+
 export interface Exhibition {
   id: string
   title: string
@@ -36,5 +38,21 @@ const exhibitions: Exhibition[] = [
 
 export const getExhibitions = (): Exhibition[] => {
   return exhibitions
+}
+
+export const getAboutHeroData = () => {
+  return aboutData.hero
+}
+
+export const getAboutMiddleData = () => {
+  return aboutData.middle
+}
+
+export const getAboutFeaturesData = () => {
+  return aboutData.features
+}
+
+export const getAboutFeatureCards = () => {
+  return aboutData.features.cards
 }
 

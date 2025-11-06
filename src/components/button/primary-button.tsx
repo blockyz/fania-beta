@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Button } from './default-button';
+import { IButtonProps } from '@/lib/types';
 
-const PrimaryButton = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+export const PrimaryButton = ({ className, ...props }: IButtonProps) => {
   return (
-    <button className={`${className}`}>
-      {children}
-    </button>
-  )
-}
-
-export default PrimaryButton
+    <Button
+      {...props}
+      className={`bg-primary hover:bg-primary-hover active:bg-primary-active  disabled:cursor-not-allowed disabled:bg-primary-disabled ${className}`}
+    />
+  );
+};
