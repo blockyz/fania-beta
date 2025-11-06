@@ -1,17 +1,12 @@
 import React from 'react';
 import { Button } from './default-button';
-import { Location05Icon } from '@/assets/icons';
+import { IButtonProps } from '@/lib/types';
 
-export const SecondaryButton = () => {
+export const SecondaryButton = ({ className, ...props }: IButtonProps) => {
   return (
-    < Button
-      size="md"
-      bg=""
-      textColor="text-purple-600"
-      text="مکان من"
-      borderColor="border border-purple-600"
-      leftIcon={<Location05Icon />}
-      rightIcon={<Location05Icon />}
+    <Button
+      {...props}
+      className={`bg-transparent border-2 border-primary text-primary hover:border-primary-hover hover:text-primary-hover active:border-primary-active active:text-primary-active disabled:border-primary-disabled disabled:text-primary-disabled disabled:cursor-not-allowed ${className}`}
     />
   );
 };

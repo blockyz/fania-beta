@@ -1,17 +1,12 @@
 import React from 'react';
 import { Button } from './default-button';
-import { Location05Icon } from '@/assets/icons';
+import { IButtonProps } from '@/lib/types';
 
-export const PurpleOutlineButton = () => {
+export const TertiaryButton = ({ className, ...props }: IButtonProps) => {
   return (
     <Button
-      size="md"
-      bg=""
-      textColor="text-purple-600"
-      text="وارد"
-      borderColor=""
-      leftIcon={<Location05Icon />}
-      rightIcon={<Location05Icon />}
+      {...props}
+      className={`bg-transparent text-primary hover:bg-tertiary-hover-bg hover:text-primary-hover active:bg-tertiary-active-bg active:text-primary-active disabled:text-primary-disabled disabled:cursor-not-allowed ${className}`}
     />
   );
 };

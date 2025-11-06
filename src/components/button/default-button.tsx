@@ -9,6 +9,7 @@ interface Props {
   onClick?: () => void;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  disabled?: boolean;
 }
 
 const sizes = {
@@ -18,13 +19,14 @@ const sizes = {
 };
 
 export const Button = ({
-  size,
+  size = 'md',
   text,
   textClassName = 'text-white',
   className = '',
   onClick,
   leftIcon,
   rightIcon,
+  disabled,
 }: Props) => {
   const hasLeft = !!leftIcon;
   const hasRight = !!rightIcon;
@@ -32,6 +34,7 @@ export const Button = ({
   return (
     <button
       onClick={onClick}
+      disabled={disabled}
       className={`
         ${sizes[size]} 
         ${className}

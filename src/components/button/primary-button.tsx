@@ -1,16 +1,12 @@
 import React from 'react';
 import { Button } from './default-button';
-import { Location05Icon } from '@/assets/icons';
+import { IButtonProps } from '@/lib/types';
 
-export const PrimaryButton = () => {
+export const PrimaryButton = ({ className, ...props }: IButtonProps) => {
   return (
     <Button
-      size="md"
-      bg="bg-purple-600"
-      textColor="text-white"
-      text="مکان من"
-      leftIcon={<Location05Icon />}
-      rightIcon={<Location05Icon />}
+      {...props}
+      className={`bg-primary hover:bg-primary-hover active:bg-primary-active disabled:bg-primary-disabled disabled:cursor-not-allowed ${className}`}
     />
   );
 };
