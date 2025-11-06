@@ -1,4 +1,9 @@
+import ExhibitionsSection from "./components/exhibitions-section";
 
 export default function Home() {
-  return (<p>parsa</p>);
+  return (
+    <div>
+      <ExhibitionsSection />
+    </div>
+  );
 }

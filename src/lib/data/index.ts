@@ -1,4 +1,18 @@
 import aboutData from './about.json'
+import exhibitions from './exhibitions.json'
+
+export interface Exhibition {
+  id: string
+  title: string
+  location: string
+  description: string
+  image: string
+  date: string
+}
+
+export const getExhibitions = (): Exhibition[] => {
+  return exhibitions
+}
 
 export const getAboutHeroData = () => {
   return aboutData.hero

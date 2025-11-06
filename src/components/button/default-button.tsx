@@ -1,16 +1,6 @@
 
-import React from 'react';
-
-interface Props {
-  size: 'sm' | 'md' | 'lg';
-  text: string;
-  textClassName?: string;
-  className?: string;
-  onClick?: () => void;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
-  disabled?: boolean;
-}
+import { IButtonProps } from '@/lib/types';
+import React, { ReactNode } from 'react';
 
 const sizes = {
   sm: 'min-w-[122px] h-[40px] text-sm px-3',
@@ -20,14 +10,14 @@ const sizes = {
 
 export const Button = ({
   size = 'md',
-  text,
+  children,
   textClassName = 'text-white',
   className = '',
   onClick,
   leftIcon,
   rightIcon,
   disabled,
-}: Props) => {
+}: IButtonProps) => {
   const hasLeft = !!leftIcon;
   const hasRight = !!rightIcon;
 
@@ -46,7 +36,7 @@ export const Button = ({
           {leftIcon}
         </span>
       )}
-      <span className={textClassName}>{text}</span>
+      <span className={textClassName}>{children}</span>
       {hasRight && (
         <span className="w-6 h-6 ml-2">
           {rightIcon}
