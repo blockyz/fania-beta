@@ -14,9 +14,7 @@ module.exports = {
         lightsteelblue: "#cbcdff",
       },
       fontFamily: {
-        pelak: ["var(--font-pelak)", "sans-serif"],
-        inter: "Inter",
-        plak: ["var(--font-plak)", "sans-serif"],
+        pelak: ["var(--font-pelak)"],        
       },
       borderRadius: {
         "num-999": "999px",
