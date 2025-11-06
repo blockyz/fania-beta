@@ -5,16 +5,17 @@ import AboutCard from '@/app/about/components/about-card'
 import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFeatureCards } from '@/lib/data'
 import { translate } from '@/lib/helper'
 
+export const metadata = {
+  title: translate('aboutUs'),
+  description: translate('aboutUs'),
+}
+
 const AboutPage = () => {
   const heroData = getAboutHeroData()
   const middleData = getAboutMiddleData()
   const featuresData = getAboutFeaturesData()
   const featureCards = getAboutFeatureCards()
 
-  const metadata = {
-    title: translate('aboutUs'),
-    description: translate('aboutUs'),
-  }
 
   return (
     <div className='flex flex-col items-center gap-12 ' dir='rtl'>

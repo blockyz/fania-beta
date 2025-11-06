@@ -1,12 +1,12 @@
 'use client'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowUp01Icon } from '@hugeicons/core-free-icons'
-import { Exhibition } from '@/lib/types/index'
+import { IExhibition } from '@/lib/types/index'
 import { translate } from '@/lib/helper'
 import TertiaryButton from '@/components/button/tertiary-button'
 
 interface ExhibitionCardProps {
-  exhibition: Exhibition
+  exhibition: IExhibition
 }
 
 export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {

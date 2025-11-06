@@ -1,21 +1,13 @@
-import { TCategory } from '../types/index';
+import { IExhibition, ICategory } from '../types/index';
 import categoriesData from './categories.json';
 import aboutData from './about.json'
 import exhibitions from './exhibitions.json'
-export interface Exhibition {
-  id: string
-  title: string
-  location: string
-  description: string
-  image: string
-  date: string
-}
 
-export const getCategoriesList = (): TCategory[] => {
+export const getCategoriesList = (): ICategory[] => {
   return categoriesData;
 };
 
-export const getExhibitions = (): Exhibition[] => {
+export const getExhibitions = (): IExhibition[] => {
   return exhibitions
 }
 

@@ -24,11 +24,8 @@ export default function CardCategory({ title, productsCount }: CardCategoryProps
         {/* Top Section */}
         <div className="flex justify-between items-start">
           {/* Products Count Button - بالا سمت راست */}
-          <TertiaryButton>
-            <HugeiconsIcon icon={ArrowUpLeft01Icon} size={20} color="black" />
-            <span dir="rtl" className="text-darkgray">
-              {productsCount} {translate('products')}
-            </span>
+          <TertiaryButton leftIcon={<HugeiconsIcon icon={ArrowUpLeft01Icon} size={20} color="black" />}>
+            {productsCount} {translate('products')}
           </TertiaryButton>
           {/* Category Title - بالا سمت چپ */}
           <h3 className="font-pelak text-num-16 leading-num-22 tracking-num--0_18 text-black font-bold">
