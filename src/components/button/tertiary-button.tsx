@@ -1,19 +1,13 @@
 import React from 'react';
+import { Button } from './default-button';
+import { IButtonProps } from '@/lib/types';
 
-interface TertiaryButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-}
-
-export default function TertiaryButton({ children, onClick, className = '' }: TertiaryButtonProps) {
+const TertiaryButton = ({ className, ...props }: IButtonProps) => {
   return (
-    <button
-      onClick={onClick}
-      className={`flex items-center gap-2 font-pelak text-num-14 leading-num-20 tracking-num--0_16 text-black bg-transparent border-none cursor-pointer ${className}`}
-    >
-      {children}
-    </button>
+    <Button
+      {...props}
+      className={`bg-transparent text-primary hover:bg-tertiary-hover-bg hover:text-primary-hover active:bg-tertiary-active-bg active:text-primary-active disabled:text-primary-disabled disabled:cursor-not-allowed ${className}`}
+    />
   );
-}
-
+};
+export default TertiaryButton
