@@ -32,7 +32,7 @@ export const Button = ({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`${sizes[size]} ${radiusVariants[radius]} ${className} font-medium flex items-center justify-center transition-all`} >
+      className={`${sizes[size]} ${radiusVariants[radius]} ${className} font-medium flex flex-nowrap items-center justify-center transition-all`} >
       {hasLeft && (
         <span className={`w-6 h-6 ${hasRight ? 'ml-2' : ''}`}>
           {leftIcon}

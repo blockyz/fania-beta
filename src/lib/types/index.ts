@@ -1,11 +1,16 @@
-import React from 'react';
+import { ReactNode } from "react";
 
 export type TDictionary = { [key: string]: string };
 
+export interface ICategory {
+  id: number;
+  title: string;
+  productsCount: number;
+};
 export interface IButtonProps {
   size?: 'sm' | 'md' | 'lg';
   radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
-  children: string;
+  children: ReactNode;
   textClassName?: string;
   className?: string;
   onClick?: () => void;
@@ -13,7 +18,7 @@ export interface IButtonProps {
   rightIcon?: React.ReactNode;
   disabled?: boolean;
 }
-export interface Exhibition {
+export interface IExhibition {
   id: string
   title: string
   location: string
