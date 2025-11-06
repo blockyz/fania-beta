@@ -19,7 +19,6 @@ const FA_DICTIONARY: TDictionary = {
   ReadMore: 'ادامه مطلب',
   scrollDown: 'به سمت پایین اسکرول کنید',
   successfulProjects: 'پروژه موفق',
-  products: 'محصول',
   articles: 'مقاله',
   aboutUs: 'درباره ما',
 }
