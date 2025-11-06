@@ -4,14 +4,21 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        whitesmoke: "#f9f9fb",
-        black: "#000",
-        gray: "#1e1e1e",
-        darkgray: "#afafaf",
-        lightsteelblue: "#cbcdff",
+  "theme": {
+    "extend": {
+      "colors": {
+        "primary": "#5B5BD6",
+        "primary-hover": "#5151CD",
+        "primary-active": "#5753C6",
+        "primary-disabled": "#9B9EF0",
+        "secondary-hover": "#9B9EF0",
+        "tertiary-hover-bg": "#CBCDFF",
+        "tertiary-active-bg": "#B8BAF8",
+        "whitesmoke": "#f9f9fb",
+        "black": "#000",
+        "gray": "#1e1e1e",
+        "darkgray": "#afafaf",
+        "lightsteelblue": "#cbcdff",
       },
       fontFamily: {
         pelak: ["var(--font-pelak)"],        
