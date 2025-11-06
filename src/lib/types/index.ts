@@ -4,6 +4,7 @@ export type TDictionary = { [key: string]: string };
 
 export interface IButtonProps {
   size?: 'sm' | 'md' | 'lg';
+  radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
   children: string;
   textClassName?: string;
   className?: string;
