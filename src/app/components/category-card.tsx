@@ -1,5 +1,6 @@
- 'use client'
-import { ArrowExpand02Icon } from '@hugeicons/react';
+'use client'
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowExpand02FreeIcons } from '@hugeicons/core-free-icons';
 import Image from 'next/image';
 import React, { FC } from 'react';
 
@@ -16,7 +17,7 @@ export const CategoryCard: FC<Props> = ({ image, title, count }) => {
         <h3 className="text-xl font-bold text-gray-900">{title}</h3>
         <div className="flex items-center gap-2">
           <span className="text-sm text-gray-500">{count}</span>
-          <ArrowExpand02Icon className="w-5 h-5" />
+          <HugeiconsIcon icon={ArrowExpand02FreeIcons} className="w-5 h-5" />
         </div>
       </div>
 

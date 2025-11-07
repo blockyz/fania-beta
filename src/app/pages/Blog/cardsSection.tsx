@@ -22,7 +22,6 @@ const products = [
     title: 'محصول چهارم',
     description: 'توضیحات محصول چهارم با جزئیات بیشتر.',
   },
-  // می‌تونی محصولات بیشتری اضافه کنی
 ];
 
 export default function CardsSection() {
