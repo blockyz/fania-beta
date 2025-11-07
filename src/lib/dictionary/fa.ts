@@ -23,6 +23,11 @@ const FA_DICTIONARY: TDictionary = {
   AboutUs: 'درباره ما',
   category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
-  count: '( 50 محصول )'
+  count: '( 50 محصول )',
+  articles:'مقالات',
+  OurAcademicAndProfessionalDomain:"علمی و تخصصی ما",
+  articlesCount:'( 50 مقاله )'
+
+
 }
 export default FA_DICTIONARY
