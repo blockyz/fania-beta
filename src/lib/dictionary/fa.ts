@@ -21,5 +21,8 @@ const FA_DICTIONARY: TDictionary = {
   SuccessfulProjects: 'پروژه موفق',
   Articles: 'مقاله',
   AboutUs: 'درباره ما',
+  category: 'دسته بندی',
+  OurAreasofExpertise: 'حوزه های فعالیت ما',
+  count: '( 50 محصول )'
 }
 export default FA_DICTIONARY
