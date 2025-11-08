@@ -1,37 +1,37 @@
 [
   {
     "id": 1,
-    "title": "medical",
+    "title": "Medical",
     "productsCount": 5
   },
   {
     "id": 2,
-    "title": "agriculture",
+    "title": "Agriculture",
     "productsCount": 5
   },
   {
     "id": 3,
-    "title": "geologyAndMineralogy",
+    "title": "GeologyAndMineralogy",
     "productsCount": 5
   },
   {
     "id": 4,
-    "title": "surveillanceAndSecurity",
+    "title": "SurveillanceAndSecurity",
     "productsCount": 5
   },
   {
     "id": 5,
-    "title": "livestockAndPoultry",
+    "title": "LivestockAndPoultry",
     "productsCount": 5
   },
   {
     "id": 6,
-    "title": "waterDesalination",
+    "title": "WaterDesalination",
     "productsCount": 5
   },
   {
     "id": 7,
-    "title": "meteorologyAndRoadMaintenance",
+    "title": "MeteorologyAndRoadMaintenance",
     "productsCount": 5
   }
 ]
