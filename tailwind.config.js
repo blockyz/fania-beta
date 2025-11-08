@@ -21,7 +21,7 @@ module.exports = {
         "lightsteelblue": "#cbcdff",
       },
       fontFamily: {
-        pelak: ["var(--font-pelak)"],        
+        vazirmatn: ["var(--font-vazirmatn)"],        
       },
       borderRadius: {
         "num-999": "999px",
