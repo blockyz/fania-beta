@@ -1,0 +1,16 @@
+<svg width="325" height="260" viewBox="0 0 325 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="325" height="260" fill="#D3D3D3"/>
+  <g opacity="0.3">
+    <!-- Frame/Gallery Icon -->
+    <rect x="112.5" y="80" width="100" height="80" rx="4" stroke="#808080" stroke-width="3" fill="none"/>
+    <rect x="122.5" y="90" width="80" height="60" rx="2" stroke="#808080" stroke-width="2" fill="none"/>
+    
+    <!-- Mountain/Landscape Icon inside frame -->
+    <path d="M130 135 L145 115 L160 130 L175 110 L190 135" stroke="#808080" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="140" cy="105" r="4" fill="#808080"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="162.5" y="185" font-family="Arial, sans-serif" font-size="16" fill="#808080" text-anchor="middle">نمایشگاه</text>
+</svg>
+

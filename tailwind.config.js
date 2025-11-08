@@ -18,6 +18,8 @@ module.exports = {
         "black": "#000",
         "gray": "#1e1e1e",
         "darkgray": "#afafaf",
+        "textgray": "#60646C",
+        "gray-hover": "#555960",
         "lightsteelblue": "#cbcdff",
       },
       fontFamily: {

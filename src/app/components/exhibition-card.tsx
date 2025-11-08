@@ -1,9 +1,10 @@
 'use client'
 import { HugeiconsIcon } from '@hugeicons/react'
-import { ArrowUp01Icon } from '@hugeicons/core-free-icons'
+import { ArrowUp01Icon, ArrowUpLeft01Icon } from '@hugeicons/core-free-icons'
 import { IExhibition } from '@/lib/types/index'
 import { translate } from '@/lib/helper'
 import TertiaryButton from '@/components/button/tertiary-button'
+import Image from 'next/image'
 
 interface ExhibitionCardProps {
   exhibition: IExhibition
@@ -23,19 +24,20 @@ export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {
       </div>
 
       {/* Center Section - Image */}
-      <div className="shrink-0 w-[325px] h-[260px] bg-darkgray rounded-2xl overflow-hidden">
-        <img
-          src={exhibition.image}
+      <div className="shrink-0 w-[325px] h-[260px] bg-darkgray rounded-2xl overflow-hidden relative">
+        <Image
+          src="/exhibition-placeholder.svg"
           alt={exhibition.title}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
       </div>
 
       {/* Left Section - Description */}
-      <div className="w-[378px] h-[78px] flex items-start text-left">
-        <p className="text-[16px] font-medium leading-[26px] text-gray">
+      <div className="w-[378px] h-[78px] flex items-start text-right">
+        <p className="text-[16px] font-medium leading-[26px] text-textgray">
           {exhibition.description}{' '}
-          <TertiaryButton rightIcon={<HugeiconsIcon icon={ArrowUp01Icon} size={16} className="text-darkgray" strokeWidth={2} />}>
+          <TertiaryButton className="cursor-pointer inline-flex! min-w-0! h-auto! px-0! align-baseline bg-transparent! text-darkgray! hover:text-gray-hover! active:text-gray-hover!" rightIcon={<HugeiconsIcon icon={ArrowUpLeft01Icon} size={16} className="text-gray" strokeWidth={2} />}>
             {translate('ReadMore')}
           </TertiaryButton>
         </p>
