@@ -24,9 +24,10 @@ const FA_DICTIONARY: TDictionary = {
   category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
   count: '( 50 محصول )',
-  articles:'مقالات',
-  OurAcademicAndProfessionalDomain:"علمی و تخصصی ما",
-  articlesCount:'( 50 مقاله )'
+  articles: 'مقالات',
+  OurAcademicAndProfessionalDomain: "علمی و تخصصی ما",
+  articlesCount: '( 50 مقاله )',
+  moreAbout: "جزئیات بیشتر"
 
 
 }

@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/button/default-button';
+import { translate } from '@/lib/helper';
 
 interface Props {
   image: string;
@@ -36,11 +37,11 @@ export default function ProductCard({ image, title, description }: Props) {
       </div>
       <div className="flex justify-center">
         <Button
-  size="md"
-  className="w-[280px] h-[40px] !rounded-full bg-[#5B5BD6] border border-[#5B5BD6]"
->
-  جزئیات بیشتر
-</Button>
+          size="md"
+          className="w-[280px] h-[40px] !rounded-full bg-[#5B5BD6] border border-[#5B5BD6]"
+        >
+          {translate('moreAbout')}
+        </Button>
       </div>
     </div>
   );
