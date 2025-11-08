@@ -28,7 +28,7 @@ export default function CardCategory({ title, productsCount }: CardCategoryProps
             {productsCount} {translate('products')}
           </TertiaryButton>
           {/* Category Title - بالا سمت چپ */}
-          <h3 className="font-pelak text-num-16 leading-num-22 tracking-num--0_18 text-black font-bold">
+          <h3 className=" text-num-16 leading-num-22 tracking-num--0_18 text-black font-bold">
             {translate(title)}
           </h3>
         </div>
