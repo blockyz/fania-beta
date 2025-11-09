@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowUpLeft01Icon } from '@hugeicons/core-free-icons';
 import { translate } from '@/lib/helper';
-import TertiaryButton from '@/components/button/tertiary-button';
+import {TertiaryButton} from '@/components/button/tertiary-button';
 
 interface CardCategoryProps {
   title: string;

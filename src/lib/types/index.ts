@@ -26,3 +26,10 @@ export interface IExhibition {
   image: string
   date: string
 }
+
+export interface IProductCard {
+  title: string;
+  description: string;
+  image?: string;
+  onDetailsClick?: () => void;
+}
