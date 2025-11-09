@@ -26,7 +26,6 @@ export interface IExhibition {
   image: string
   date: string
 }
-
 export interface IEventDetail {
   id: string;
   title: string;
@@ -40,4 +39,10 @@ export interface IEventDetail {
   mainImage: string;
   subImages: string[];
   imageCaptionKey: string;
+}
+export interface IProductCard {
+  title: string;
+  description: string;
+  image?: string;
+  onDetailsClick?: () => void;
 }

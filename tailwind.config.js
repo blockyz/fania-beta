@@ -18,10 +18,12 @@ module.exports = {
         "black": "#000",
         "gray": "#1e1e1e",
         "darkgray": "#afafaf",
+        "textgray": "#60646C",
+        "gray-hover": "#555960",
         "lightsteelblue": "#cbcdff",
       },
       fontFamily: {
-        pelak: ["var(--font-pelak)"],        
+        vazirmatn: ["var(--font-vazirmatn)"],        
       },
       borderRadius: {
         "num-999": "999px",

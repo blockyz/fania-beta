@@ -25,5 +25,6 @@ const FA_DICTIONARY: TDictionary = {
   Describe: 'توضیحات',
   Honors: "افتخارات",
   Written:"نوشته",
+  MoreDetails: 'جزئیات بیشتر',
 }
 export default FA_DICTIONARY

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowUpLeft01Icon } from '@hugeicons/core-free-icons';
 import { translate } from '@/lib/helper';
-import TertiaryButton from '@/components/button/tertiary-button';
+import {TertiaryButton} from '@/components/button/tertiary-button';
 
 interface CardCategoryProps {
   title: string;
@@ -22,13 +22,14 @@ export default function CardCategory({ title, productsCount }: CardCategoryProps
       {/* Content */}
       <div className="relative p-[28px_24px] h-full flex flex-col justify-between">
         {/* Top Section */}
-        <div className="flex justify-between items-start">
+        <div className="flex justify-between items-center">
           {/* Products Count Button - بالا سمت راست */}
-          <TertiaryButton leftIcon={<HugeiconsIcon icon={ArrowUpLeft01Icon} size={20} color="black" />}>
-            {productsCount} {translate('products')}
+          <TertiaryButton size='sm' textClassName='inline-flex flex-row gap-1 text-[14px] font-semibold' className="text-darkgray! p-0! m-0! hover:text-gray-hover! active:text-gray-hover! hover:bg-transparent! active:bg-transparent!" leftIcon={<HugeiconsIcon icon={ArrowUpLeft01Icon} size={20} color="black" />}>
+            <span>{translate('Products')}</span>
+            <span>{productsCount}</span>
           </TertiaryButton>
           {/* Category Title - بالا سمت چپ */}
-          <h3 className="font-pelak text-num-16 leading-num-22 tracking-num--0_18 text-black font-bold">
+          <h3 className=" text-num-16 leading-num-22 tracking-num--0_18 text-black font-bold">
             {translate(title)}
           </h3>
         </div>
