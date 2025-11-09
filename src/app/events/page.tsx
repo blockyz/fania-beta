@@ -1,7 +1,7 @@
 
-import { ArrowUpLeft01Icon } from "@/assets/icons/ArrowUpLeft";
 import { getEvents } from "@/lib/data";
 import { translate } from "@/lib/helper";
+import { ArrowUpLeft01Icon } from "hugeicons-react";
 import Image from "next/image";
 
 export default function EventsPage() {
