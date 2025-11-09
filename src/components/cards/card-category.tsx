@@ -16,7 +16,7 @@ export default function CardCategory({ title, productsCount }: CardCategoryProps
     <div className="relative w-[321px] h-[279px] rounded-3xl bg-whitesmoke overflow-hidden">
       {/* Background X Pattern - وسط */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <Image src="/cancel-icon.svg" alt="" width={200} height={200} />
+        <Image src="/exhibition-placeholder.svg" alt="" width={200} height={200} />
       </div>
 
       {/* Content */}
