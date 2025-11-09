@@ -21,12 +21,9 @@ const FA_DICTIONARY: TDictionary = {
   SuccessfulProjects: 'پروژه موفق',
   Articles: 'مقاله',
   AboutUs: 'درباره ما',
-
-  //little part in right//
   Section: "بخش",
   Describe: 'توضیحات',
   Honors: "افتخارات",
-  //main section in detail event//
   Written:"نوشته",
 }
 export default FA_DICTIONARY
