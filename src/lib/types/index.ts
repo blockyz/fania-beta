@@ -33,3 +33,9 @@ export interface IProductCard {
   image?: string;
   onDetailsClick?: () => void;
 }
+
+export interface IStatistic {
+  id: string;
+  value: string;
+  label: string;
+}

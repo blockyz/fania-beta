@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "value": "+50",
+    "label": "ProjectsCount"
+  },
+  {
+    "id": "2",
+    "value": "+50",
+    "label": "Collaborations"
+  },
+  {
+    "id": "3",
+    "value": "+50",
+    "label": "PublishedProducts"
+  },
+  {
+    "id": "4",
+    "value": "+50",
+    "label": "InProgress"
+  }
+]

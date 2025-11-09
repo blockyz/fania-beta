@@ -1,7 +1,8 @@
-import { IExhibition, ICategory } from '../types/index';
+import { IExhibition, ICategory, IStatistic } from '../types/index';
 import categoriesData from './categories.json';
 import aboutData from './about.json'
 import exhibitions from './exhibitions.json'
+import statisticsData from './statistics.json'
 
 export const getCategoriesList = (): ICategory[] => {
   return categoriesData;
@@ -25,5 +26,9 @@ export const getAboutFeaturesData = () => {
 
 export const getAboutFeatureCards = () => {
   return aboutData.features.cards
+}
+
+export const getStatistics = (): IStatistic[] => {
+  return statisticsData
 }
 

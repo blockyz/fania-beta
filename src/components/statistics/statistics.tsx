@@ -1,0 +1,31 @@
+import React from 'react';
+import { translate } from '@/lib/helper';
+import { getStatistics } from '@/lib/data';
+import { StatisticCard } from './statistic-card';
+
+export const Statistics = () => {
+  const statistics = getStatistics();
+
+  return (
+    <div className="lg:w-full w-[390px] mx-auto flex flex-col gap-4">
+      <div className="mb-6 text-right">
+        <h2 className="text-2xl font-bold text-black">
+          {translate('OurActivitiesStatistics')}
+        </h2>
+        <p className="text-sm text-textgray mt-1">
+          {translate('InRecentYears')}
+        </p>
+      </div>
+      <div className="flex flex-col md:flex-row gap-4">
+        {statistics.map((stat) => (
+          <StatisticCard
+            key={stat.id}
+            value={stat.value}
+            label={stat.label}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
