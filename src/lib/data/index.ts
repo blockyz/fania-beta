@@ -1,11 +1,19 @@
 import { IExhibition, ICategory } from '../types/index';
 import categoriesData from './categories.json';
 import aboutData from './about.json'
+import productCardData from './product-card.json';
+
+
 import exhibitions from './exhibitions.json'
 
 export const getCategoriesList = (): ICategory[] => {
   return categoriesData;
 };
+
+export const getProductCardData = () => {
+  return productCardData;
+};
+
 
 export const getExhibitions = (): IExhibition[] => {
   return exhibitions
