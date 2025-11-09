@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from './default-button';
 import { IButtonProps } from '@/lib/types';
 
-const TertiaryButton = ({ className, ...props }: IButtonProps) => {
+export const TertiaryButton = ({ className, ...props }: IButtonProps) => {
   return (
     <Button
       {...props}
@@ -10,4 +10,3 @@ const TertiaryButton = ({ className, ...props }: IButtonProps) => {
     />
   );
 };
-export default TertiaryButton
