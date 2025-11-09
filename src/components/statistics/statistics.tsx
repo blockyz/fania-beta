@@ -9,10 +9,10 @@ export const Statistics = () => {
   return (
     <div className="lg:w-full w-[390px] mx-auto flex flex-col gap-4">
       <div className="mb-6 text-right">
-        <h2 className="text-2xl font-bold text-black">
+        <h2 className="text-[16px] lg:text-[24px] font-bold text-black">
           {translate('OurActivitiesStatistics')}
         </h2>
-        <p className="text-sm text-textgray mt-1">
+        <p className="text-[16px] lg:text-[24px] font-bold text-textgray mt-1">
           {translate('InRecentYears')}
         </p>
       </div>

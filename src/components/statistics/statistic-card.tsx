@@ -1,6 +1,6 @@
 import React from 'react';
 import { translate } from '@/lib/helper';
-import { HugeiconsIcon } from '@hugeicons/react';
+import { HugeiconsIcon, HugeiconsIconProps } from '@hugeicons/react';
 import {
   File02Icon,
   UserMultiple02Icon,
@@ -13,19 +13,15 @@ interface IStatisticCardProps {
   label: string;
 }
 
-type IconType = ([string, {
-  [key: string]: string | number;
-}])[] | readonly (readonly [string, {
-  readonly [key: string]: string | number;
-}])[];
+type IconType = HugeiconsIconProps['icon']
 
 const iconConfig: {
-  [key: string]: { icon: IconType; iconColor: string; bgClass: string };
+  [key: string]: { icon: IconType; bgClass: string; iconColorClass: string };
 } = {
-  ProjectsCount: { icon: File02Icon, iconColor: '#FF6B9D', bgClass: 'bg-stat-pink-bg' },
-  Collaborations: { icon: UserMultiple02Icon, iconColor: '#4CAF50', bgClass: 'bg-stat-green-bg' },
-  PublishedProducts: { icon: ShoppingBag01Icon, iconColor: '#E91E63', bgClass: 'bg-stat-magenta-bg' },
-  InProgress: { icon: Globe02Icon, iconColor: '#9E9E9E', bgClass: 'bg-stat-gray-bg' },
+  ProjectsCount: { icon: File02Icon, bgClass: 'bg-stat-pink-bg', iconColorClass: 'text-stat-pink' },
+  Collaborations: { icon: UserMultiple02Icon, bgClass: 'bg-stat-green-bg', iconColorClass: 'text-stat-green' },
+  PublishedProducts: { icon: ShoppingBag01Icon, bgClass: 'bg-stat-magenta-bg', iconColorClass: 'text-stat-magenta' },
+  InProgress: { icon: Globe02Icon, bgClass: 'bg-stat-gray-bg', iconColorClass: 'text-stat-gray' },
 };
 
 export const StatisticCard = ({
@@ -40,13 +36,13 @@ export const StatisticCard = ({
         className={`w-14 h-14 rounded-full flex items-center justify-center ${config?.bgClass || 'bg-gray'}`}
       >
         {config && (
-          <HugeiconsIcon icon={config.icon} size={28} color={config.iconColor} />
+          <HugeiconsIcon icon={config.icon} size={28} className={config.iconColorClass} />
         )}
       </div>
-      <div className="text-4xl font-bold text-black text-right">
+      <div className="text-[40px] font-bold text-black text-right">
         {value}
       </div>
-      <div className="text-sm text-black text-right">
+      <div className="text-[16px] text-gray text-right">
         {translate(label)}
       </div>
     </div>
