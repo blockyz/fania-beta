@@ -26,5 +26,11 @@ const FA_DICTIONARY: TDictionary = {
   Honors: "افتخارات",
   Written:"نوشته",
   MoreDetails: 'جزئیات بیشتر',
+  OurActivitiesStatistics: 'آمار فعالیت ما',
+  InRecentYears: 'در چند سال گذشته',
+  ProjectsCount: 'تعداد پروژه ها',
+  Collaborations: 'همکاری‌ها',
+  PublishedProducts: 'محصولات انتشار‌شده',
+  InProgress: 'در دست ساخت...',
 }
 export default FA_DICTIONARY

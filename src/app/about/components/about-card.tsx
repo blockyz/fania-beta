@@ -1,11 +1,8 @@
 import React from 'react'
-import { HugeiconsIcon } from '@hugeicons/react'
+import { HugeiconsIcon, HugeiconsIconProps } from '@hugeicons/react'
 
-type IconType = ([string, {
-  [key: string]: string | number;
-}])[] | readonly (readonly [string, {
-  readonly [key: string]: string | number;
-}])[];
+type IconType = HugeiconsIconProps['icon']
+
 
 interface AboutCardProps {
   icon: IconType
