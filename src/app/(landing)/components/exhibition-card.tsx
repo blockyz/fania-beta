@@ -3,7 +3,7 @@ import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowUp01Icon, ArrowUpLeft01Icon } from '@hugeicons/core-free-icons'
 import { IExhibition } from '@/lib/types/index'
 import { translate } from '@/lib/helper'
-import TertiaryButton from '@/components/button/tertiary-button'
+import { TertiaryButton } from '@/components/button/tertiary-button'
 import Image from 'next/image'
 
 interface ExhibitionCardProps {
