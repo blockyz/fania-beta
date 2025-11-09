@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" >
-      <body className={vazirmatn.className}>
+      <body dir="rtl" className={vazirmatn.className}>
         {children}
       </body>
     </html>

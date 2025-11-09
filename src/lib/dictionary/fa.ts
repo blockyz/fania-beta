@@ -22,5 +22,11 @@ const FA_DICTIONARY: TDictionary = {
   Articles: 'مقاله',
   AboutUs: 'درباره ما',
   MoreDetails: 'جزئیات بیشتر',
+  OurActivitiesStatistics: 'آمار فعالیت ما',
+  InRecentYears: 'در چند سال گذشته',
+  ProjectsCount: 'تعداد پروژه ها',
+  Collaborations: 'همکاری‌ها',
+  PublishedProducts: 'محصولات انتشار‌شده',
+  InProgress: 'در دست ساخت...',
 }
 export default FA_DICTIONARY
