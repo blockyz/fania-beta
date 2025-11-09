@@ -1,7 +1,6 @@
-'use client';
 
 import { ArrowUpLeft01Icon } from "@/assets/icons/ArrowUpLeft";
-import { getEvents } from "@/lib/data/Events/inexs";
+import { getEvents } from "@/lib/data";
 import { translate } from "@/lib/helper";
 import Image from "next/image";
 
@@ -13,10 +12,10 @@ export default function EventsPage() {
       {/* Section Title */}
       <div className="text-center pt-44 pb-12 text-[#333]">
         <h2 className="text-2xl font-semibold whitespace-pre-line leading-[1.6]">
-          {translate("All_Exhibitions_And_Awards")}
+          {translate("AllExhibitionsAndAwards")}
         </h2>
         <p className="text-sm mt-1 opacity-80 whitespace-pre-line">
-          {translate("Across_All_Fields")}
+          {translate("AcrossAllFields")}
         </p>
       </div>
 
@@ -33,30 +32,18 @@ export default function EventsPage() {
               text-[#333]
             "
           >
-            <div className="flex gap-2.5">
-              <p className="
-              text-sm leading-6 text-right
-              md:order-1
-              order-3
-              md:mr-[84px]
-              
-            ">
-                {translate(item.describe)}
-                <div className="flex gap-">
-                <ArrowUpLeft01Icon/>
-
-                <a className="" href="">ادامه مطلب</a>
-
-
-                </div>
-                
-                      
-
+            <div className="md:order-1 order-3 md:pr-[84px] text-right">
+              <p dir="rtl" className=" leading-6 text-[#333]  inline">
+                {item.describe}
+                <span className="inline-flex items-center gap-2 pr-2 text-xs font-medium text-[#7C7C7C] ml-1">
+                  <span>{translate("More")}</span>
+                  <ArrowUpLeft01Icon />
+                </span>
               </p>
 
 
-
             </div>
+
 
 
 
@@ -73,13 +60,15 @@ export default function EventsPage() {
             </div>
 
             <h3 className="
-              font-semibold text-lg text-right
+              font-semibold text-right
               md:order-3
               order-1
               whitespace-pre-line
-              md:ml-[199px]
+              text-[24px]
+              text-nowrap
             ">
-              {translate(item.title)}
+              {item.title} <br/>
+              {item.location}
             </h3>
           </div>
         </div>
