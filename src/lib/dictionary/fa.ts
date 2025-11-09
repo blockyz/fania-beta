@@ -21,7 +21,6 @@ const FA_DICTIONARY: TDictionary = {
   SuccessfulProjects: 'پروژه موفق',
   Articles: 'مقاله',
   AboutUs: 'درباره ما',
-
-
+  MoreDetails: 'جزئیات بیشتر',
 }
 export default FA_DICTIONARY
