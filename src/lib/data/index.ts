@@ -1,9 +1,10 @@
-import { IExhibition, ICategory, IEventDetail , IStatistic , ICertification } from '../types/index';
+import { IExhibition, ICategory, IEventDetail , IStatistic , ICertification , IBlogDetail} from '../types/index';
 import certifications from "./certifications.json"
 import categoriesData from './categories.json';
 import aboutData from './about.json'
 import productCardData from './product-card.json';
 import exhibitions from './exhibitions.json'
+import blogDetail from "./blogDetail.json"
 import eventDetail from "./eventDetail.json"
 import statisticsData from './statistics.json'
 
@@ -39,6 +40,9 @@ export const getAboutFeatureCards = () => {
   return aboutData.features.cards
 }
 
+export const getBlogDetail = (): IBlogDetail => {
+  return blogDetail
+}
 export const getEventDetail = (): IEventDetail => {
   return eventDetail
 }
