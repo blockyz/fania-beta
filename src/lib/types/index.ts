@@ -34,6 +34,7 @@ export interface IBlogDetail {
   id: string;
   title: string;
   location: string;
+  date: string;
 }
 export interface IEventDetail {
   id: string;
