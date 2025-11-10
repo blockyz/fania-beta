@@ -26,7 +26,20 @@ export interface IExhibition {
   image: string
   date: string
 }
-
+export interface IEventDetail {
+  id: string;
+  title: string;
+  location: string;
+  city: string;
+  date: string;
+  description: string;
+  detailTitleKey: string;
+  detailTextKey: string;
+  texts: string[];
+  mainImage: string;
+  subImages: string[];
+  imageCaptionKey: string;
+}
 export interface IProductCard {
   title: string;
   description: string;

@@ -1,12 +1,10 @@
-'use client';
-
 import { translate } from '@/lib/helper';
 import { getCategoriesList } from '@/lib/data';
 import CardCategory from '@/components/cards/card-category';
 
-export default function ProductsCategory() {
-  const categories = getCategoriesList();
+const categories = getCategoriesList();
 
+export default function ProductsCategory() {
   return (
     <div className="w-[1360px] mx-auto ">
       {/* Header Section */}

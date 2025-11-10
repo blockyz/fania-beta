@@ -1,6 +1,5 @@
-'use client'
 import { HugeiconsIcon } from '@hugeicons/react'
-import { ArrowUp01Icon, ArrowUpLeft01Icon } from '@hugeicons/core-free-icons'
+import { ArrowUpLeft01Icon } from '@hugeicons/core-free-icons'
 import { IExhibition } from '@/lib/types/index'
 import { translate } from '@/lib/helper'
 import { TertiaryButton } from '@/components/button/tertiary-button'
@@ -13,7 +12,6 @@ interface ExhibitionCardProps {
 export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {
   return (
     <div dir="rtl" className="w-[1248px] h-[260px] bg-whitesmoke rounded-[20px] flex items-center gap-6 p-6">
-      {/* Right Section - Title & Location */}
       <div className="flex-1 flex flex-col justify-center text-right gap-2">
         <h3 className="text-[24px] font-bold leading-8 text-black">
           {exhibition.title}
@@ -22,8 +20,6 @@ export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {
           {exhibition.location}
         </p>
       </div>
-
-      {/* Center Section - Image */}
       <div className="shrink-0 w-[325px] h-[260px] bg-darkgray rounded-2xl overflow-hidden relative">
         <Image
           src="/exhibition-placeholder.svg"
@@ -32,8 +28,6 @@ export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {
           className="object-cover"
         />
       </div>
-
-      {/* Left Section - Description */}
       <div className="w-[378px] h-[78px] flex items-start text-right">
         <p className="text-[16px] font-medium leading-[26px] text-textgray">
           {exhibition.description}{' '}
