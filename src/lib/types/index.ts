@@ -35,6 +35,13 @@ export interface IBlogDetail {
   title: string;
   location: string;
   date: string;
+  imageCaptionKey: string;
+  subImages: string[];
+  mainImage: string;
+  texts: string[];
+  detailTextKey: string;
+  detailTitleKey: string;
+  description: string;
 }
 export interface IEventDetail {
   id: string;
