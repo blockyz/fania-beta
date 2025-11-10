@@ -1,6 +1,7 @@
 import { TDictionary } from '../types/index'
 const FA_DICTIONARY: TDictionary = {
   Home: 'خانه',
+  CertificatesAndLicenses: "گواهی ها و مجوز ها",
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',

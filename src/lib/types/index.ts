@@ -1,7 +1,11 @@
 import { ReactNode } from "react";
-
 export type TDictionary = { [key: string]: string };
 
+export interface ICertification {
+  id: string
+  title: string
+  image: string
+}
 export interface ICategory {
   id: number;
   title: string;
