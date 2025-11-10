@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { getBlogDetail } from "@/lib/data";
 
-export default function DetailImages() {
   const Bd = getBlogDetail();
-
+export default function DetailImages() {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-[264px] pb-8 max-w-full">
       
