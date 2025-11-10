@@ -4,9 +4,8 @@ import { ArrowDownDoubleIcon, Calendar03Icon, Location10Icon } from '@hugeicons/
 import { HugeiconsIcon } from '@hugeicons/react';
 
 
-const BlogHero = () => {
   const Bd = getBlogDetail();
-
+const BlogHero = () => {
   return (
     <div>
       <section className="relative w-full  bg-[#D9D9E0] flex flex-col justify-center items-center overflow-hidden rounded-4xl">
