@@ -6,17 +6,15 @@ import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFea
 import { translate } from '@/lib/helper'
 
 export const metadata = {
-  title: translate('aboutUs'),
-  description: translate('aboutUs'),
+  title: translate('AboutUs'),
+  description: translate('AboutUs'),
 }
 
+const heroData = getAboutHeroData()
+const middleData = getAboutMiddleData()
+const featuresData = getAboutFeaturesData()
+const featureCards = getAboutFeatureCards()
 const AboutPage = () => {
-  const heroData = getAboutHeroData()
-  const middleData = getAboutMiddleData()
-  const featuresData = getAboutFeaturesData()
-  const featureCards = getAboutFeatureCards()
-
-
   return (
     <div className='flex flex-col items-center gap-12 ' dir='rtl'>
       <div className='w-[1408px] h-[721px] bg-darkgray rounded-[40px] relative overflow-hidden'>
@@ -44,7 +42,7 @@ const AboutPage = () => {
 
         <div className='absolute bottom-0 left-0 right-0 h-[104px] rounded-b-[40px] flex items-center justify-center gap-2  text-[14px] text-whitesmoke' style={{ background: 'linear-gradient(180deg, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 100%)' }}>
           <HugeiconsIcon icon={ArrowDownDoubleIcon} size={20} color="currentColor" strokeWidth={2} />
-          {translate('scrollDown')}
+          {translate('ScrollDown')}
           <HugeiconsIcon icon={ArrowDownDoubleIcon} size={20} color="currentColor" strokeWidth={2} />
         </div>
       </div>

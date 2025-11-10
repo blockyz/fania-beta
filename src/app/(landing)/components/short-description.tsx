@@ -2,8 +2,8 @@ import React from 'react';
 import { PrimaryButton } from '@/components/button/primary-button';
 import { getProductCardData } from '@/lib/data';
 
+const productCard = getProductCardData();
 export default function ShortDescription() {
-  const productCard = getProductCardData();
 
   return (
     <div className="w-full max-w-[1360px] h-auto bg-gray-100 flex flex-col md:flex-row justify-between items-start p-4 gap-6">
