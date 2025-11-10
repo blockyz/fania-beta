@@ -11,9 +11,9 @@ interface ExhibitionCardProps {
 
 export default function ExhibitionCard({ exhibition }: ExhibitionCardProps) {
   return (
-    <div dir="rtl" className="w-[1248px] h-[260px] bg-whitesmoke rounded-[20px] flex items-center gap-6 p-6">
+    <div dir="rtl" className="lg:w-[1248px] w-[390px]  bg-whitesmoke rounded-[20px] flex flex-col lg:flex-row items-center gap-6 p-6">
       <div className="flex-1 flex flex-col justify-center text-right gap-2">
-        <h3 className="text-[24px] font-bold leading-8 text-black">
+        <h3 className="lg:text-[24px] text-[20px] font-bold leading-8 text-black">
           {exhibition.title}
         </h3>
         <p className="text-[24px] font-bold leading-8 text-black">

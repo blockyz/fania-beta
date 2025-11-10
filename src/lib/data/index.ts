@@ -1,4 +1,4 @@
-import { IExhibition, ICategory, IEventDetail , IStatistic } from '../types/index';
+import { IExhibition, ICategory, IEventDetail, IStatistic } from '../types/index';
 import categoriesData from './categories.json';
 import aboutData from './about.json'
 import productCardData from './product-card.json';
