@@ -2,8 +2,8 @@ import Image from "next/image";
 import { translate } from "@/lib/helper";
 import { getCertifications } from "@/lib/data";
 
+const certifications = getCertifications();
 export default function Certification() {
-  const certifications = getCertifications();
 
   return (
     <section className="w-full px-10 py-10">
