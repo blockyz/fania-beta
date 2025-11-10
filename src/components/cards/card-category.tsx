@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { ArrowUpLeft01Icon } from '@hugeicons/core-free-icons';
