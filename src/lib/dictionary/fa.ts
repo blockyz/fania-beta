@@ -24,7 +24,7 @@ const FA_DICTIONARY: TDictionary = {
   Section: "بخش",
   Describe: 'توضیحات',
   Honors: "افتخارات",
-  Written:"نوشته",
+  Written: "نوشته",
   MoreDetails: 'جزئیات بیشتر',
   OurActivitiesStatistics: 'آمار فعالیت ما',
   InRecentYears: 'در چند سال گذشته',
@@ -32,5 +32,8 @@ const FA_DICTIONARY: TDictionary = {
   Collaborations: 'همکاری‌ها',
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
+  category: 'دسته بندی',
+  OurAreasofExpertise: 'حوزه های فعالیت ما',
+  count: '( 50 محصول )'
 }
 export default FA_DICTIONARY
