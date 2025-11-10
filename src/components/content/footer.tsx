@@ -1,4 +1,3 @@
-'use client';
 
 import { JSX } from "react";
 import Link from "next/link";
@@ -25,7 +24,7 @@ const footerLinks: FooterLink[] = [
   { href: "/", labelKey: "Home" },
   { href: "/Field", labelKey: "Field" },
   { href: "/AboutUs", labelKey: "AboutUs" },
-  { href: "/ContactUs", labelKey: "ContactUs" }, 
+  { href: "/ContactUs", labelKey: "ContactUs" },
 ];
 
 const footerPages: FooterPage[] = [
@@ -35,90 +34,97 @@ const footerPages: FooterPage[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-  { href: "#", label: "LinkedIn", icon: <InstagramIcon className="w-5 h-5" /> },
-  { href: "#", label: "Twitter", icon: <WhatsappIcon className="w-5 h-5" /> },
-  { href: "#", label: "Instagram", icon: <TelegramIcon className="w-5 h-5" /> },
+  { href: "#", label: "LinkedIn", icon: <InstagramIcon color="#FFFFFF" className="w-5 h-5" /> },
+  { href: "#", label: "Twitter", icon: <WhatsappIcon color="#FFFFFF" className="w-5 h-5" /> },
+  { href: "#", label: "Instagram", icon: <TelegramIcon color="#FFFFFF" className="w-5 h-5" /> },
 ];
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#CBCDFF] rounded-[40px] text-black mt-auto">
-      <div className="max-w-7xl mx-auto px-10 py-[81px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Company Info */}
-          <div className="space-y-10">
+    <footer className="w-full bg-[#272962] text-[#FFFFFF] mt-auto rounded-[40px]">
+      <div className="max-w-7xl mx-auto px-8 md:px-10 py-[81px]">
+
+        {/* Wrapper اصلی: Flex دسکتاپ، ستون موبایل */}
+        <div className="flex flex-col md:flex-row  gap-10 md:gap-20">
+
+          {/* Logo + Description */}
+          <div className="space-y-6 shrink-0 md:flex-1 order-last md:order-first">
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 relative rounded-[50%] bg-[#AFAFAF]" />
+              <div className="h-12 w-12 relative rounded-full bg-[#AFAFAF]" />
               <h3 className="text-lg font-bold font-inter">{translate("Logo")}</h3>
             </div>
-            <p className="text-sm font-semibold leading-relaxed">
+            <p className="text-sm w-[75%] text-justify font-semibold leading-relaxed">
               {translate("CompanyDescription")}
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-pelak">{translate("QuickLinks")}</h4>
-            <nav className="flex flex-col space-y-4">
-              {footerLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-semibold hover:text-white transition-colors font-pelak"
-                >
-                  {translate(link.labelKey)}
-                </Link>
-              ))}
-            </nav>
-          </div>
+          {/* Links Wrapper */}
+          <div className="flex flex-col md:flex-row ml-5 justify-between gap-10 md:gap-20 flex-1">
 
-          {/* Pages & Social Media */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-pelak">{translate("Pages")}</h4>
-            <nav className="flex flex-col space-y-4">
-              {footerPages.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-semibold hover:text-white transition-colors font-pelak"
-                >
-                  {translate(link.labelKey)}
-                </Link>
-              ))}
-            </nav>
+            {/* Quick Links */}
+            <div className="space-y-4 min-w-[120px]">
+              <h4 className="text-lg text-[#CDCED6] font-pelak">{translate("QuickLinks")}</h4>
+              <nav className="flex flex-col space-y-4">
+                {footerLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-semibold transition-colors font-pelak"
+                  >
+                    {translate(link.labelKey)}
+                  </Link>
+                ))}
+              </nav>
+            </div>
 
-            <div className="space-y-4 pt-6">
-              <h4 className="text-lg font-pelak">{translate("SocialMedia")}</h4>
-              <div className="flex flex-wrap gap-3">
+            {/* Pages + Social Media */}
+            <div className="space-y-4 min-w-[120px]">
+              <h4 className="text-lg text-[#CDCED6] font-pelak">{translate("Pages")}</h4>
+              <nav className="flex flex-col text-nowrap space-y-4">
+                {footerPages.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-semibold  transition-colors font-pelak"
+                  >
+                    {translate(link.labelKey)}
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Social Media زیر Pages */}
+              <div className="mt-6 flex flex-wrap gap-3">
+                <h4 className="text-lg text-[#CDCED6] text-nowrap font-pelak w-full">{translate("SocialMedia")}</h4>
                 {socialLinks.map((social) => (
                   <Link
                     key={social.label}
                     href={social.href}
-                    className="w-8 h-8 bg-[#9B9EF0] rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
+                    className="w-8 h-8 bg-[#5753C6] rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
                   >
                     {social.icon}
                   </Link>
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Contact */}
-          <div className="space-y-4">
-            <div className="space-y-6 text-sm">
-              <div className="flex flex-col gap-2">
-                <span className="font-inter">{translate("Address")}</span>
-                <span className="font-pelak font-semibold">{translate("Tehran")}</span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="font-pelak">{translate("Phone")}</span>
-                <span className="font-inter font-semibold">021 2233456</span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="font-pelak">{translate("Email")}</span>
-                <span className="font-inter font-semibold">example@email.com</span>
+            {/* Contact */}
+            <div className="space-y-4 min-w-[120px]">
+              <div className="space-y-6 text-sm">
+                <div className="flex flex-col gap-2">
+                  <span className="font-inter text-[#CDCED6]">{translate("Address")}</span>
+                  <span className="font-pelak font-semibold">{translate("Tehran")}</span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="font-pelak text-[#CDCED6]">{translate("Phone")}</span>
+                  <span className="font-inter font-semibold">021 2233456</span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="font-pelak text-[#CDCED6]">{translate("Email")}</span>
+                  <span className="font-inter font-semibold">example@email.com</span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

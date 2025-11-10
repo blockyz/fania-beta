@@ -3,26 +3,44 @@
 import type { NextPage } from 'next';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import { Search01Icon } from '@/assets/Icons';
 import { translate } from '@/lib/helper';
+import { Button } from '../button/default-button';
+import HeaderHamburgerMenu from './HeaderHamburgerMenu';
+import PopupCard from '../PopUp/PopupCard';
 
 interface NavigationItem {
   href: string;
   labelKey: string;
+  hasPopup?: boolean;
 }
 
 const navigationItems: NavigationItem[] = [
   { href: "/", labelKey: 'Home' },
-  { href: "/Field", labelKey: 'Field' },
-  { href: "/events", labelKey: 'Events' },
+  { href: "/Field", labelKey: 'Field', hasPopup: true },
+  { href: "/events", labelKey: 'Events', hasPopup: true },
   { href: "/about", labelKey: 'AboutUs' },
 ];
 
+const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
+  Field: [
+    { label: 'پزشکی', imageSrc: '/images/medical.jpg' },
+    { label: 'کشاورزی', imageSrc: '/images/agriculture.jpg' },
+    { label: 'زمین‌شناسی و ژئولوژی', imageSrc: '/images/geology.jpg' },
+    { label: 'نظارت و امنیت', imageSrc: '/images/security.jpg' },
+    { label: 'دامداری و مرغداری', imageSrc: '/images/farming.jpg' },
+    { label: 'شیرین‌سازی آب', imageSrc: '/images/water.jpg' },
+    { label: 'هواشناسی و راهداری', imageSrc: '/images/weather.jpg' },
+  ],
+  Events: [
+    { label: 'نمایشگاه 1', imageSrc: '/images/event1.jpg' },
+    { label: 'نمایشگاه 2', imageSrc: '/images/event2.jpg' },
+    { label: 'نمایشگاه 3', imageSrc: '/images/event3.jpg' },
+  ],
+};
+
 const Header: NextPage = () => {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState<'Fa' | 'En'>('Fa');
 
   const isActivePath = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -30,11 +48,11 @@ const Header: NextPage = () => {
   };
 
   return (
-    <header className="w-full relative flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10">
+    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 relative">
       {/* Logo */}
       <div className="flex items-center text-left text-[16px] font-inter">
         <Link href="/" className="flex items-center justify-end gap-4 hover:opacity-80 transition-opacity">
-          <div className="h-12 w-12 relative rounded-[50%] bg-[#AFAFAF]" />
+          <div className="h-12 w-12 relative rounded-full bg-[#AFAFAF]" />
           <b className="relative">{translate('Logo')}</b>
         </Link>
       </div>
@@ -42,72 +60,60 @@ const Header: NextPage = () => {
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center justify-center gap-4">
         {navigationItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`rounded-num-999 flex items-center justify-center py-3 px-num-16 gap-2 transition-colors hover:bg-gray-100 ${isActivePath(item.href) ? 'bg-[#F9F9FB]' : 'bg-whitesmoke'}`}
-          >
-            {currentLang === 'Fa' && !isActivePath(item.href) && (
-              <div className="h-1 w-1 relative rounded-[50%] bg-gray" />
-            )}
+          <div key={item.href} className="relative group">
+            <Button
+              className={`rounded-num-999 cursor-pointer flex items-center justify-center py-3 px-num-16 gap-2 transition-colors
+        ${isActivePath(item.href) ? 'bg-[#F9F9FB]' : 'bg-whitesmoke hover:bg-gray-100'}`}
+            >
+              <div className="flex items-center gap-2">
+                {(item.labelKey !== 'Home' && item.labelKey !== 'AboutUs') && (
+                  <span className="bg-black rounded-full inline-block transition-all duration-200 group-hover:w-2 group-hover:h-2 w-1 h-1" />
+                )}
+                <span className="tracking-num--0_16 leading-num-20 font-semibold text-black text-nowrap">
+                  {translate(item.labelKey)}
+                </span>
+              </div>
+            </Button>
 
-            <div className="relative tracking-num--0_16 leading-num-20 font-semibold">
-              {translate(item.labelKey)}
-            </div>
-
-            {currentLang !== 'Fa' && !isActivePath(item.href) && (
-              <div className="h-1 w-1 relative rounded-[50%] bg-gray" />
+            {item.hasPopup && (
+              <>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-10 h-4 group-hover:block hidden" />
+                <div
+                  className="absolute top-[calc(100%+1rem)] left-1/2 -translate-x-1/2 opacity-0 invisible
+            group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                >
+                  <PopupCard
+                    items={popupData[item.labelKey]}
+                    onClose={() => { }}
+                  />
+                </div>
+              </>
             )}
-          </Link>
+          </div>
         ))}
       </nav>
 
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden flex flex-col items-center justify-center w-8 h-8 gap-1"
-        aria-label={translate('Home')} 
-      >
-        <div className={`w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-        <div className={`w-6 h-0.5 bg-black transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
-        <div className={`w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
-      </button>
 
       {/* Language & Search */}
-      <div className="flex items-center justify-center gap-4">
-        <button className="rounded-num-999 bg-whitesmoke flex items-center justify-center py-2.5 px-2.5 gap-2 hover:bg-gray-200 transition-colors">
+      <div className="hidden md:flex items-center justify-center gap-4">
+        <div className="w-10 h-10 rounded-full bg-whitesmoke flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
           <Search01Icon width={24} height={24} />
-        </button>
-
-        <button 
-          className="rounded-num-999 bg-whitesmoke flex items-center justify-center py-2.5 px-num-16 gap-2 hover:bg-gray-200 transition-colors"
-          onClick={() => setCurrentLang(currentLang === 'En' ? 'Fa' : 'En')}
+        </div>
+        <Button
+          size='md'
+          radius="full"
+          className="bg-whitesmoke hover:bg-gray-200 cursor-pointer flex items-center justify-between gap-2 px-num-10 py-2.5 text-black"
+          textClassName="tracking-num--0_16 leading-num-20 font-medium"
         >
-          <div className="h-1 w-1 relative rounded-[50%] bg-gray" />
-          <div className='w-6 h-6 bg-[#AFAFAF] rounded-full' />
-          <div className="relative tracking-num--0_16 leading-num-20 font-medium">
-            {translate(currentLang)}
+          <div className='flex gap-2 items-center'>
+            <span className="w-1 h-1 bg-black rounded-full inline-block" />
+            <div className='w-6 h-6 flex items-center bg-[#AFAFAF] rounded-full' />
+            {translate('Fa')}
           </div>
-        </button>
+        </Button>
       </div>
 
-      {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg md:hidden z-50">
-          <nav className="flex flex-col p-4 gap-2">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`rounded-num-999 flex items-center justify-center py-3 px-num-16 transition-colors hover:bg-gray-100 ${isActivePath(item.href) ? 'bg-black text-white' : 'bg-whitesmoke'}`}
-              >
-                {translate(item.labelKey)}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+      <HeaderHamburgerMenu />
     </header>
   );
 };
