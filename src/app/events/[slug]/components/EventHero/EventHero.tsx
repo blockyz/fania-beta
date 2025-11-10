@@ -1,11 +1,9 @@
 import { getEventDetail } from '@/lib/data';
 import { translate } from '@/lib/helper'
-import { ArrowDownDoubleIcon, Calendar03Icon, Location10Icon } from 'hugeicons-react'
-import React from 'react'
-
+import { ArrowDownDoubleIcon, Calendar03Icon, Location10Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react';
 
 const Ed = getEventDetail();
-
 
 const EventHero = () => {
   return (
@@ -21,12 +19,12 @@ const EventHero = () => {
             </h2>
             <div className='flex gap-8 pt-3 pb-6 text-[#60646C]'>
               <div className='flex gap-2'>
-                <Location10Icon/>
+                <HugeiconsIcon icon={Location10Icon} size={20} color="currentColor" strokeWidth={2} />
                 <p>{Ed.city}</p>
               </div>
 
               <div className='flex gap-2'>
-                <Calendar03Icon/>
+                <HugeiconsIcon icon={Calendar03Icon} size={20} color="currentColor" strokeWidth={2} />
                 <p>{Ed.date}</p>
               </div>
 
@@ -40,11 +38,11 @@ const EventHero = () => {
 
 
         <div className="absolute bottom-10 w-full flex gap-2 items-center justify-center text-center text-white">
-          <ArrowDownDoubleIcon />
+          <HugeiconsIcon icon={ArrowDownDoubleIcon} size={20} color="currentColor" strokeWidth={2} />
           <p className="text-sm md:text-base font-medium mb-1">
             {translate('ScrollDown')}
           </p>
-          <ArrowDownDoubleIcon />
+          <HugeiconsIcon icon={ArrowDownDoubleIcon} size={20} color="currentColor" strokeWidth={2} />
         </div>
       </section>
     </div>
