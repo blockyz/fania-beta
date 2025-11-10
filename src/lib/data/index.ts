@@ -1,5 +1,5 @@
 
-import { IExhibition, ICategory, IEventDetail , IStatistic , ICertification } from '../types/index';
+import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification } from '../types/index';
 import certifications from "./certifications.json"
 
 import categoriesData from './categories.json';
@@ -9,9 +9,14 @@ import productCardData from './product-card.json';
 import exhibitions from './exhibitions.json'
 import eventDetail from "./eventDetail.json"
 import statisticsData from './statistics.json'
+import blogsData from './blogs.json'
 
 export const getCertifications = (): ICertification[] => {
   return certifications
+};
+
+export const getBlogsList = () => {
+  return blogsData;
 };
 
 export const getCategoriesList = (): ICategory[] => {

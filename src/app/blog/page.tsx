@@ -1,10 +1,13 @@
 import React from 'react'
+import BlogMidelSection from './components/blog-midelSection'
+import CardsSection from './components/card-section'
 
 
-const BlogPage = ({ }) => {
+export default function BlogPage() {
   return (
-    <div>page</div>
+    <>
+      <BlogMidelSection />
+      <CardsSection />
+    </>
   )
 }
-
-export default BlogPage
