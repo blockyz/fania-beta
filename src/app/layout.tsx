@@ -23,6 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
+      {/* <body className={pelak.className}> */}
+
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="grow">
