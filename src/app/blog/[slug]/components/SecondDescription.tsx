@@ -2,9 +2,8 @@ import { getBlogDetail } from "@/lib/data";
 import { translate } from "@/lib/helper";
 
 
-export default function SecondDescription() {
   const Bd = getBlogDetail();
-
+export default function SecondDescription() {
   return (
     <div className="flex flex-col max-auto justify-center px-4 md:px-[264px] space-y-4 md:space-y-6 text-right max-w-full md:max-w-full">
 
