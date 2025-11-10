@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Medical",
+    "productsCount": 5
+  },
+  {
+    "id": 2,
+    "title": "Agriculture",
+    "productsCount": 5
+  },
+  {
+    "id": 3,
+    "title": "GeologyAndMineralogy",
+    "productsCount": 5
+  },
+  {
+    "id": 4,
+    "title": "SurveillanceAndSecurity",
+    "productsCount": 5
+  },
+  {
+    "id": 5,
+    "title": "LivestockAndPoultry",
+    "productsCount": 5
+  },
+  {
+    "id": 6,
+    "title": "WaterDesalination",
+    "productsCount": 5
+  },
+  {
+    "id": 7,
+    "title": "MeteorologyAndRoadMaintenance",
+    "productsCount": 5
+  }
+]

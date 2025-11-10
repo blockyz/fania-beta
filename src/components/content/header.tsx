@@ -36,7 +36,7 @@ const Header: NextPage = () => {
   };
 
   return (
-    <header className="w-full relative flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak bg-white border-b border-gray-200 px-4 py-3">
+    <header className="w-full relative flex items-center justify-between gap-5 text-right text-num-14 text-black bg-white border-b border-gray-200 px-4 py-3">
       {/* Language Toggle */}
       <div className="flex items-center justify-center gap-4">
         <button
