@@ -1,8 +1,8 @@
 import React from 'react';
 import CardCategory from '@/components/cards/card-category';
 import { getCategorieList } from '@/lib/data';
-export const CardsSection = () => {
   const categories = getCategorieList();
+export const CardsSection = () => {
 
   return (
     <section className="w-full py-16 px-4" dir="rtl">
