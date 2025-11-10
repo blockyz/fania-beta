@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getEventDetail } from "@/lib/data";
 
 export default function DetailImages() {
@@ -8,24 +9,34 @@ export default function DetailImages() {
       
       <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 w-full">
         
-        <div className="flex flex-col w-full md:w-[668px] h-[300px] sm:h-[400px] md:h-[508px] rounded-[40px] bg-gray-200 overflow-hidden">
-          <img src={Ed.mainImage} className="w-full h-full object-cover" />
+        <div className="relative w-full md:w-[668px] h-[300px] sm:h-[400px] md:h-[508px] rounded-[40px] overflow-hidden">
+          <Image
+            src={Ed.mainImage}
+            alt=""
+            fill
+            className="object-cover bg-gray-200"
+          />
         </div>
 
         <div className="md:flex grid grid-cols-3 md:flex-col gap-4 w-full md:w-auto overflow-x-auto md:overflow-x-visible">
           {Ed.subImages.map((img, index) => (
             <div
               key={index}
-              className="shrink-0 w-full md:w-[220px] md:h-40 rounded-[40px] aspect-square md:aspect-auto bg-gray-200 overflow-hidden"
+              className="relative shrink-0 w-full md:w-[220px] md:h-40 rounded-[40px] aspect-square md:aspect-auto overflow-hidden"
             >
-              <img src={img} className="w-full h-full object-cover" />
+              <Image
+                src={img}
+                alt=""
+                fill
+                className="object-cover bg-gray-200"
+              />
             </div>
           ))}
         </div>
 
       </div>
 
-      <p className="text-sm sm:text-base text-right  w-full md:w-full">
+      <p className="text-sm sm:text-base text-right w-full">
         {Ed.imageCaptionKey}
       </p>
 
