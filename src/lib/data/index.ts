@@ -12,8 +12,8 @@ export const getCertifications = (): ICertification[] => {
   return certifications
 };
 
-export const getCategorieList = (): ICategory[] => {
-  return categorieData;
+export const getCategoriesList = (): ICategory[] => {
+  return categoriesData;
 };
 
 export const getProductCardData = () => {
