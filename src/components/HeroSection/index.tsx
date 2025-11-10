@@ -26,9 +26,9 @@ export default function HeroSection() {
         <p className="text-sm md:text-base text-white font-medium">
           {translate('HeroPlayVideo')}
         </p>
-        <button className="w-14 h-14 md:w-16 md:h-16 bg-white flex items-center justify-center rounded-full shadow-md hover:scale-105 transition-transform">
+        <div className="w-14 h-14 md:w-16 md:h-16 bg-white flex items-center justify-center rounded-full shadow-md hover:scale-105 transition-transform">
           <PlayIcon />
-        </button>
+        </div>
       </div>
 
       <div className="absolute bottom-10 w-full flex gap-2 items-center justify-center text-center text-white">
