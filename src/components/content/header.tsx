@@ -26,7 +26,7 @@ const navigationItems: NavigationItem[] = [
 const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
   Field: [
     { label: 'پزشکی', imageSrc: '/images/medical.jpg' },
-    { label: 'کشاورزی', imageSrc: '/images/agriculture.jpg' },
+    { label: 'Farrm', imageSrc: '/images/agriculture.jpg' },
     { label: 'زمین‌شناسی و ژئولوژی', imageSrc: '/images/geology.jpg' },
     { label: 'نظارت و امنیت', imageSrc: '/images/security.jpg' },
     { label: 'دامداری و مرغداری', imageSrc: '/images/farming.jpg' },

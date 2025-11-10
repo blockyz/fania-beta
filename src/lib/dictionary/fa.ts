@@ -1,7 +1,6 @@
 import { TDictionary } from '../types/index'
 
 const FA_DICTIONARY: TDictionary = {
-  // Header
   Logo: 'لوگو',
   Home: 'خانه',
   Field: 'حوزه فعالیت',
@@ -9,8 +8,6 @@ const FA_DICTIONARY: TDictionary = {
   AboutUs: 'درباره ما',
   Fa: 'فارسی',
   En: 'انگلیسی',
-
-  //  Footer
   QuickLinks: 'لینک های سریع',
   ContactUs : 'تماس با ما',
   Pages: 'صفحات',
@@ -22,7 +19,6 @@ const FA_DICTIONARY: TDictionary = {
   Phone: 'تماس',
   Email: 'ایمیل',
   CompanyDescription: 'توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف',
-
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',
@@ -42,6 +38,17 @@ const FA_DICTIONARY: TDictionary = {
   ScrollDown: 'به سمت پایین اسکرول کنید',
   SuccessfulProjects: 'پروژه موفق',
   Articles: 'مقاله',
+  AboutUs: 'درباره ما',
+  Section: "بخش",
+  Describe: 'توضیحات',
+  Honors: "افتخارات",
+  Written:"نوشته",
+  MoreDetails: 'جزئیات بیشتر',
+  OurActivitiesStatistics: 'آمار فعالیت ما',
+  InRecentYears: 'در چند سال گذشته',
+  ProjectsCount: 'تعداد پروژه ها',
+  Collaborations: 'همکاری‌ها',
+  PublishedProducts: 'محصولات انتشار‌شده',
+  InProgress: 'در دست ساخت...',
 }
 export default FA_DICTIONARY
-
