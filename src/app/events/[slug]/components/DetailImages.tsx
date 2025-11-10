@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { getEventDetail } from "@/lib/data";
 
+const Ed = getEventDetail();
 export default function DetailImages() {
-  const Ed = getEventDetail();
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-[264px] pb-8 max-w-full">

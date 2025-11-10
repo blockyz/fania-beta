@@ -3,12 +3,12 @@ import { translate } from '@/lib/helper';
 import { getStatistics } from '@/lib/data';
 import { StatisticCard } from './statistic-card';
 
+const statistics = getStatistics();
 export const Statistics = () => {
-  const statistics = getStatistics();
 
   return (
-    <div className="lg:w-full w-[390px] mx-auto flex flex-col gap-4">
-      <div className="mb-6 text-right">
+    <div className="lg:w-full w-[390px] mx-auto mt-8 flex align-center flex-col gap-4">
+      <div className="mb-6 px-2 text-right">
         <h2 className="text-[16px] lg:text-[24px] font-bold text-black">
           {translate('OurActivitiesStatistics')}
         </h2>
@@ -16,7 +16,7 @@ export const Statistics = () => {
           {translate('InRecentYears')}
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row px-4 gap-4">
         {statistics.map((stat) => (
           <StatisticCard
             key={stat.id}

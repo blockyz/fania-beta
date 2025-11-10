@@ -1,8 +1,8 @@
 import { getEventDetail } from "@/lib/data";
 import { translate } from "@/lib/helper";
 
+const Ed = getEventDetail();
 export default function DetailDescription() {
-  const Ed = getEventDetail();
 
   return (
     <div className="flex flex-col space-y-4 md:space-y-6 text-right px-4 md:px-0 max-w-full md:max-w-full">
