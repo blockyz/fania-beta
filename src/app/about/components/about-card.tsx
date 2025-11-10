@@ -1,11 +1,8 @@
 import React from 'react'
-import { HugeiconsIcon } from '@hugeicons/react'
+import { HugeiconsIcon, HugeiconsIconProps } from '@hugeicons/react'
 
-type IconType = ([string, {
-  [key: string]: string | number;
-}])[] | readonly (readonly [string, {
-  readonly [key: string]: string | number;
-}])[];
+type IconType = HugeiconsIconProps['icon']
+
 
 interface AboutCardProps {
   icon: IconType
@@ -20,13 +17,13 @@ const AboutCard: React.FC<AboutCardProps> = ({ icon, title, subtitle, descriptio
       <div className='w-12 h-12 bg-whitesmoke rounded-xl mb-6 flex items-center justify-center'>
         <HugeiconsIcon icon={icon} size={24} color="black" />
       </div>
-      <h3 className='font-pelak text-[20px] leading-8 text-black mb-3'>
+      <h3 className='text-[20px] leading-8 text-black mb-3'>
         {title}
       </h3>
-      <p className='font-pelak text-[14px] leading-6 text-darkgray mb-3'>
+      <p className='text-[14px] leading-6 text-darkgray mb-3'>
         {subtitle}
       </p>
-      <p className='font-pelak text-[14px] leading-6 text-black'>
+      <p className='text-[14px] leading-6 text-black'>
         {description}
       </p>
     </div>

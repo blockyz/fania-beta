@@ -1,7 +1,11 @@
 import { ReactNode } from "react";
-
 export type TDictionary = { [key: string]: string };
 
+export interface ICertification {
+  id: string
+  title: string
+  image: string
+}
 export interface ICategory {
   id: number;
   title: string;
@@ -30,6 +34,12 @@ export interface IBlogDetail {
   id: string;
   title: string;
   location: string;
+}
+export interface IEventDetail {
+  id: string;
+  title: string;
+  location: string;
+  city: string;
   date: string;
   description: string;
   detailTitleKey: string;
@@ -38,4 +48,15 @@ export interface IBlogDetail {
   mainImage: string;
   subImages: string[];
   imageCaptionKey: string;
+}
+export interface IProductCard {
+  title: string;
+  description: string;
+  image?: string;
+  onDetailsClick?: () => void;
+}
+export interface IStatistic {
+  id: string;
+  value: string;
+  label: string;
 }

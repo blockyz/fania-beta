@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Vazirmatn } from 'next/font/google'
+
 import "./globals.css";
 
-const pelak = localFont({
-  src: "../../public/fonts/PelakFA-Black.ttf",
-  variable: "--font-pelak",
-  display: "swap",
-});
+const vazirmatn = Vazirmatn({
+  subsets: ['arabic', 'latin'],
+  variable: "--font-vazirmatn",
+})
 
 export const metadata: Metadata = {
   title: "FANIA",
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl" >
-      <body className={pelak.className}>
+    <html lang="fa" >
+      <body dir="rtl" className={vazirmatn.className}>
         {children}
       </body>
     </html>

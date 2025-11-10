@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold font-pelak">
+            <h4 className="text-lg font-semibold ">
               {currentLang === 'fa' ? "لینک های سریع" : "Quick Links"}
             </h4>
             <nav className="flex flex-col space-y-2">
@@ -65,7 +65,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-gray-300 hover:text-white transition-colors font-pelak"
+                  className="text-sm text-gray-300 hover:text-white transition-colors "
                 >
                   {link.label[currentLang]}
                 </Link>
@@ -75,13 +75,13 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold font-pelak">
+            <h4 className="text-lg font-semibold ">
               {currentLang === 'fa' ? "اطلاعات تماس" : "Contact Info"}
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <span>📍</span>
-                <span className="font-pelak">
+                <span className="">
                   {currentLang === 'fa'
                     ? "آدرس: تهران، ایران"
                     : "Address: Tehran, Iran"
@@ -101,7 +101,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold font-pelak">
+            <h4 className="text-lg font-semibold ">
               {currentLang === 'fa' ? "شبکه های اجتماعی" : "Social Media"}
             </h4>
             <div className="flex flex-wrap gap-3">
@@ -122,7 +122,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-600 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-300 font-pelak">
+            <div className="text-sm text-gray-300 ">
               {currentLang === 'fa'
                 ? `© ${new Date().getFullYear()} تمامی حقوق محفوظ است.`
                 : `© ${new Date().getFullYear()} All rights reserved.`
@@ -132,16 +132,16 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setCurrentLang(currentLang === 'fa' ? 'en' : 'fa')}
-                className="text-sm text-gray-300 hover:text-white transition-colors font-pelak"
+                className="text-sm text-gray-300 hover:text-white transition-colors "
               >
                 {currentLang === 'fa' ? 'English' : 'فارسی'}
               </button>
 
               <div className="flex gap-4 text-sm text-gray-300">
-                <Link href="/privacy" className="hover:text-white transition-colors font-pelak">
+                <Link href="/privacy" className="hover:text-white transition-colors ">
                   {currentLang === 'fa' ? "حریم خصوصی" : "Privacy Policy"}
                 </Link>
-                <Link href="/terms" className="hover:text-white transition-colors font-pelak">
+                <Link href="/terms" className="hover:text-white transition-colors ">
                   {currentLang === 'fa' ? "شرایط استفاده" : "Terms of Service"}
                 </Link>
               </div>
