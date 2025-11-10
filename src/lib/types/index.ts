@@ -30,6 +30,19 @@ export interface IExhibition {
   image: string
   date: string
 }
+export interface IBlogDetail {
+  id: string;
+  title: string;
+  location: string;
+  date: string;
+  imageCaptionKey: string;
+  subImages: string[];
+  mainImage: string;
+  texts: string[];
+  detailTextKey: string;
+  detailTitleKey: string;
+  description: string;
+}
 export interface IEventDetail {
   id: string;
   title: string;
@@ -50,7 +63,6 @@ export interface IProductCard {
   image?: string;
   onDetailsClick?: () => void;
 }
-
 export interface IStatistic {
   id: string;
   value: string;
