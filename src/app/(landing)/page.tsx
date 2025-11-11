@@ -4,7 +4,7 @@ import { Statistics } from "@/components/sections/statistics/statistics";
 
 export default function Home() {
   return (<>
-    <div className="lg:w-[1360px] w-[390px] mx-auto">
+    <div >
       <Statistics />
     </div>
     <div className="lg:w-[1360px] w-[390px] mx-auto">

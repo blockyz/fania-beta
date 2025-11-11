@@ -58,10 +58,10 @@ export interface IEventDetail {
   imageCaptionKey: string;
 }
 export interface IProductCard {
+  id: string;
   title: string;
   description: string;
   image?: string;
-  onDetailsClick?: () => void;
 }
 export interface IStatistic {
   id: string;

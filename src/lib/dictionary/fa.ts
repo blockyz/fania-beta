@@ -35,5 +35,7 @@ const FA_DICTIONARY: TDictionary = {
   InProgress: 'در دست ساخت...',
   category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
+  OurProducts: 'محصولات ما',
+  ToEnterTechnologies: 'در راستای ورود به فناوریهای',
 }
 export default FA_DICTIONARY

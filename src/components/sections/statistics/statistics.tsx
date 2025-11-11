@@ -7,7 +7,7 @@ const statistics = getStatistics();
 export const Statistics = () => {
 
   return (
-    <div className="lg:w-full w-[390px] mx-auto mt-8 flex align-center flex-col gap-4">
+    <div className="lg:w-[1360px] w-[390px] mx-auto mt-8 flex align-center flex-col gap-4">
       <div className="mb-6 px-2 text-right">
         <h2 className="text-[16px] lg:text-[24px] font-bold text-black">
           {translate('OurActivitiesStatistics')}
