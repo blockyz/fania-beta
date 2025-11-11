@@ -1,6 +1,6 @@
 import ProductsCategory from "./components/product-category";
 import ExhibitionsSection from "./components/exhibitions";
-import { Statistics } from "@/components/statistics/statistics";
+import { Statistics } from "@/components/sections/statistics/statistics";
 
 export default function Home() {
   return (<>
