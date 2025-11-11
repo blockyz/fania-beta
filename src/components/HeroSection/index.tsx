@@ -1,4 +1,3 @@
-'use client';
 
 import { PlayIcon } from "@/assets/icon";
 import { ArrowDownDoubleIcon } from "@/assets/icon/arrow-down";
