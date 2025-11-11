@@ -5,15 +5,15 @@
     "stats": [
       {
         "value": "50+",
-        "labelKey": "successfulProjects"
+        "labelKey": "SuccessfulProjects"
       },
       {
         "value": "50+",
-        "labelKey": "products"
+        "labelKey": "Products"
       },
       {
         "value": "50+",
-        "labelKey": "articles"
+        "labelKey": "Articles"
       }
     ]
   },

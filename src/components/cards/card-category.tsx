@@ -16,8 +16,8 @@ export default function CardCategory({ title, productsCount }: CardCategoryProps
         <Image src="/cancel-icon.svg" alt="" width={200} height={200} />
       </div>
       <div className="relative p-[28px_24px] h-full flex flex-col justify-between">
-        <div className="flex justify-between items-center">
-          <TertiaryButton size='sm' textClassName='inline-flex flex-row gap-1 text-[14px] font-semibold' className="text-darkgray! p-0! m-0! hover:text-gray-hover! active:text-gray-hover! hover:bg-transparent! active:bg-transparent!" leftIcon={<HugeiconsIcon icon={ArrowUpLeft01Icon} size={20} color="black" />}>
+        <div className="flex flex-row-reverse justify-between items-center">
+          <TertiaryButton size='sm' textClassName='inline-flex flex-row gap-1 text-[14px] font-semibold' className="text-darkgray! p-0! m-0! hover:text-gray-hover! active:text-gray-hover! hover:bg-transparent! active:bg-transparent!" rightIcon={<HugeiconsIcon icon={ArrowUpLeft01Icon} size={20} color="black" />}>
             <span>{translate('Products')}</span>
             <span>{productsCount}</span>
           </TertiaryButton>

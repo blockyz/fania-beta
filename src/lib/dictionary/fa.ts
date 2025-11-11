@@ -19,6 +19,7 @@ const FA_DICTIONARY: TDictionary = {
   Phone: 'تماس',
   Email: 'ایمیل',
   CompanyDescription: 'توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف',
+  CertificatesAndLicenses: "گواهی ها و مجوز ها",
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',
@@ -43,7 +44,7 @@ const FA_DICTIONARY: TDictionary = {
   Section: "بخش",
   Describe: 'توضیحات',
   Honors: "افتخارات",
-  Written:"نوشته",
+  Written: "نوشته",
   MoreDetails: 'جزئیات بیشتر',
   OurActivitiesStatistics: 'آمار فعالیت ما',
   InRecentYears: 'در چند سال گذشته',
@@ -55,9 +56,7 @@ const FA_DICTIONARY: TDictionary = {
   Event1:"نمایشگاه 1",
   Event2:"نمایشگاه 2",
   Event3:"نمایشگاه 3",
-
-
-
-
+  category: 'دسته بندی',
+  OurAreasofExpertise: 'حوزه های فعالیت ما',
 }
 export default FA_DICTIONARY
