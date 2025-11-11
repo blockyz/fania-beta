@@ -1,10 +1,29 @@
 import { TDictionary } from '../types/index'
+
 const FA_DICTIONARY: TDictionary = {
+  Logo: 'لوگو',
   Home: 'خانه',
+  Field: 'حوزه فعالیت',
+  Events: 'نمایشگاه ها و افتخارات',
+  AboutUs: 'درباره ما',
+  Fa: 'فارسی',
+  En: 'انگلیسی',
+  QuickLinks: 'لینک های سریع',
+  ContactUs : 'تماس با ما',
+  Pages: 'صفحات',
+  Blog:'مقالات',
+  Certificates : 'مدارک و گواهینامه ها',
+  SocialMedia: 'شبکه های اجتماعی',
+  Address: 'آدرس',
+  Tehran: 'تهران ، خیابان طالقانی ، خیابان امام خمینی ، خیابان امام رضا ، خیابان امام هشتم ...',
+  Phone: 'تماس',
+  Email: 'ایمیل',
+  CompanyDescription: 'توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف کار شما توضیحات مختصر درباره کار تحقیقاتی و دسته بندی های مختلف',
   CertificatesAndLicenses: "گواهی ها و مجوز ها",
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',
+  // 
   Medical: 'پزشکی',
   Agriculture: 'کشاورزی',
   GeologyAndMineralogy: 'زمین‌شناسی و ژئولوژی',
@@ -12,6 +31,7 @@ const FA_DICTIONARY: TDictionary = {
   LivestockAndPoultry: 'دامداری و مرغداری',
   WaterDesalination: 'شیرین‌سازی آب',
   MeteorologyAndRoadMaintenance: 'هواشناسی و راهداری',
+  // 
   Exhibitions: 'نمایشگاه ها',
   RecentOpenings: 'افتخارات اخیر ما',
   ExhibitionTitle: 'نمایشگاه بزرگ علمی',
@@ -21,7 +41,6 @@ const FA_DICTIONARY: TDictionary = {
   ScrollDown: 'به سمت پایین اسکرول کنید',
   SuccessfulProjects: 'پروژه موفق',
   Articles: 'مقاله',
-  AboutUs: 'درباره ما',
   Section: "بخش",
   Describe: 'توضیحات',
   Honors: "افتخارات",
@@ -33,6 +52,10 @@ const FA_DICTIONARY: TDictionary = {
   Collaborations: 'همکاری‌ها',
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
+  // event item
+  Event1:"نمایشگاه 1",
+  Event2:"نمایشگاه 2",
+  Event3:"نمایشگاه 3",
   category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
 }
