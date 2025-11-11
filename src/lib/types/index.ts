@@ -26,3 +26,16 @@ export interface IExhibition {
   image: string
   date: string
 }
+export interface IBlogDetail {
+  id: string;
+  title: string;
+  location: string;
+  date: string;
+  description: string;
+  detailTitleKey: string;
+  detailTextKey: string;
+  texts: string[];
+  mainImage: string;
+  subImages: string[];
+  imageCaptionKey: string;
+}
