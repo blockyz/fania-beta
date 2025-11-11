@@ -24,14 +24,14 @@ export default function HeaderHamburgerMenu() {
   return (
     <div className="md:hidden bg-amber-50">
       {/* Hamburger Button */}
-      <button
+      <div
         onClick={() => setIsMenuOpen(true)}
         className="flex flex-col justify-between w-6 h-5 focus:outline-none z-50 relative"
       >
         <span className="block h-0.5 w-full bg-black rounded"></span>
         <span className="block h-0.5 w-full bg-black rounded"></span>
         <span className="block h-0.5 w-full bg-black rounded"></span>
-      </button>
+      </div>
 
       {/* Overlay */}
       <div
@@ -48,12 +48,12 @@ export default function HeaderHamburgerMenu() {
         } flex flex-col`}
       >
         {/* Close Button */}
-        <button
+        <div
           onClick={() => setIsMenuOpen(false)}
           className="self-end p-4 text-black font-bold text-2xl hover:text-gray-600 transition-colors"
         >
           ×
-        </button>
+        </div>
 
         {/* Navigation Items */}
         <nav className="flex flex-col gap-3 mt-8 px-4">
@@ -73,9 +73,9 @@ export default function HeaderHamburgerMenu() {
 
         {/* Optional Footer / Language / Search */}
         <div className="mt-auto px-6 py-6 border-t border-gray-200">
-          <button className="w-full py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition-colors font-medium">
+          <div className="w-full text-center py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition-colors font-medium">
             {translate('Fa')}
-          </button>
+          </div>
         </div>
       </div>
     </div>

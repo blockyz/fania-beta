@@ -3,11 +3,12 @@
 import type { NextPage } from 'next';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search01Icon } from '@/assets/Icons';
 import { translate } from '@/lib/helper';
 import { Button } from '../button/default-button';
 import HeaderHamburgerMenu from './HeaderHamburgerMenu';
 import PopupCard from '../PopUp/PopupCard';
+import { Search01Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 
 interface NavigationItem {
   href: string;
@@ -97,7 +98,7 @@ const Header: NextPage = () => {
       {/* Language & Search */}
       <div className="hidden md:flex items-center justify-center gap-4">
         <div className="w-10 h-10 rounded-full bg-whitesmoke flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
-          <Search01Icon width={24} height={24} />
+        <HugeiconsIcon icon={Search01Icon}/>
         </div>
         <Button
           size='md'

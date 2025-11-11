@@ -47,11 +47,11 @@ export default function PopupCard({ items, onClose }: PopupProps) {
         </div>
 
         {/* Close Button */}
-        <button
+        <div
           onClick={onClose}
           className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center text-black font-bold text-xl hover:text-gray-600"
         >
-        </button>
+        </div>
       </div>
     </div>
   );
