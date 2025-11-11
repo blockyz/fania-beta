@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogMidelSection from './components/blog-midelSection'
+import BlogMidelSection from './components/blog-midel-section'
 import CardsSection from './components/card-section'
 
 
