@@ -51,7 +51,7 @@ const Header: NextPage = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute top-0 left-0  bg-transparent z-10">
+    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute overflow-hidden top-0 left-0  bg-transparent z-10 overflow-x-hidden">
       {/* Logo */}
       <div className="flex items-center text-left text-[16px] font-inter">
         <Link href="/" className="flex items-center justify-end gap-4 hover:opacity-80 transition-opacity">
@@ -61,7 +61,7 @@ const Header: NextPage = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center justify-center gap-4">
+      <nav className="hidden lg:flex items-center justify-center gap-4 max-w-[calc(100vw-2rem)] ">
         {navigationItems.map((item) => (
           <div key={item.href} className="relative group">
             <Button
@@ -83,7 +83,7 @@ const Header: NextPage = () => {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-10 h-4 group-hover:block hidden" />
                 <div
                   className="absolute top-[calc(100%+1rem)] left-1/2 -translate-x-1/2 opacity-0 invisible
-            group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+            group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 "
                 >
                   <PopupCard
                     items={popupData[item.labelKey]}
@@ -98,7 +98,7 @@ const Header: NextPage = () => {
 
 
       {/* Language & Search */}
-      <div className="hidden md:flex items-center justify-center gap-4">
+      <div className="hidden lg:flex items-center justify-center gap-4 ">
         <div className="w-10 h-10 rounded-full bg-whitesmoke flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
           <HugeiconsIcon icon={Search01Icon} />
         </div>

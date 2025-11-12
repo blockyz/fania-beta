@@ -24,7 +24,7 @@ export default function HeaderHamburgerMenu() {
 
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       {/* Hamburger Button */}
       <div
         onClick={() => setIsMenuOpen(true)}
