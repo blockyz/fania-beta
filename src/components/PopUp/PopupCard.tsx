@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { translate } from '@/lib/helper';
 
 interface PopupItem {
   label: string;
@@ -30,7 +31,7 @@ export default function PopupCard({ items, onClose }: PopupProps) {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {item.label}
+                  {translate(item.label)}
             </div>
           ))}
         </div>

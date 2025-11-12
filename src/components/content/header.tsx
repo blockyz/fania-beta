@@ -25,18 +25,20 @@ const navigationItems: NavigationItem[] = [
 
 const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
   Field: [
-    { label: 'پزشکی', imageSrc: '/images/medical.jpg' },
-    { label: 'Farrm', imageSrc: '/images/agriculture.jpg' },
-    { label: 'زمین‌شناسی و ژئولوژی', imageSrc: '/images/geology.jpg' },
-    { label: 'نظارت و امنیت', imageSrc: '/images/security.jpg' },
-    { label: 'دامداری و مرغداری', imageSrc: '/images/farming.jpg' },
-    { label: 'شیرین‌سازی آب', imageSrc: '/images/water.jpg' },
-    { label: 'هواشناسی و راهداری', imageSrc: '/images/weather.jpg' },
+{ label: 'Medical', imageSrc: '/images/medical.jpg' },
+{ label: 'Agriculture', imageSrc: '/images/agriculture.jpg' },
+{ label: 'GeologyAndMineralogy', imageSrc: '/images/geology.jpg' },
+{ label: 'SurveillanceAndSecurity', imageSrc: '/images/security.jpg' },
+{ label: 'LivestockAndPoultry', imageSrc: '/images/farming.jpg' },
+{ label: 'WaterDesalination', imageSrc: '/images/water.jpg' },
+{ label: 'MeteorologyAndRoadMaintenance', imageSrc: '/images/weather.jpg' },
+
+
   ],
   Events: [
-    { label: 'نمایشگاه 1', imageSrc: '/images/event1.jpg' },
-    { label: 'نمایشگاه 2', imageSrc: '/images/event2.jpg' },
-    { label: 'نمایشگاه 3', imageSrc: '/images/event3.jpg' },
+    { label: 'Event1', imageSrc: '/images/event1.jpg' },
+    { label: 'Event2', imageSrc: '/images/event2.jpg' },
+    { label: 'Event3', imageSrc: '/images/event3.jpg' },
   ],
 };
 
@@ -98,7 +100,7 @@ const Header: NextPage = () => {
       {/* Language & Search */}
       <div className="hidden md:flex items-center justify-center gap-4">
         <div className="w-10 h-10 rounded-full bg-whitesmoke flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
-        <HugeiconsIcon icon={Search01Icon}/>
+          <HugeiconsIcon icon={Search01Icon} />
         </div>
         <Button
           size='md'
