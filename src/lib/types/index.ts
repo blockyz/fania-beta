@@ -68,3 +68,26 @@ export interface IStatistic {
   value: string;
   label: string;
 }
+
+export interface IProductWeight {
+  value: string;
+  unit: string;
+}
+
+export interface IProductSpecification {
+  label: string;
+  value: string;
+}
+
+export interface IProductDetail {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  weights: IProductWeight[];
+  phoneNumber: string;
+  mainImage: string;
+  galleryImages: string[];
+  descriptions: string[];
+  specifications: IProductSpecification[];
+}
