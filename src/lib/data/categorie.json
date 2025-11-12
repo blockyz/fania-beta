@@ -1,0 +1,42 @@
+[
+  {
+    "title": "طراحی وب",
+    "productsCount": 12,
+    "image": "/images/cat1.jpg"
+  },
+  {
+    "title": "اپلیکیشن موبایل",
+    "productsCount": 8,
+    "image": "/images/cat2.jpg"
+  },
+  {
+    "title": "هوش مصنوعی",
+    "productsCount": 15,
+    "image": "/images/cat3.jpg"
+  },
+  {
+    "title": "سئو و بازاریابی",
+    "productsCount": 10,
+    "image": "/images/cat4.jpg"
+  },
+  {
+    "title": "گرافیک و UI",
+    "productsCount": 20,
+    "image": "/images/cat5.jpg"
+  },
+  {
+    "title": "بک‌اند و API",
+    "productsCount": 9,
+    "image": "/images/cat6.jpg"
+  },
+  {
+    "title": "امنیت سایبری",
+    "productsCount": 7,
+    "image": "/images/cat7.jpg"
+  },
+  {
+    "title": "دیتابیس",
+    "productsCount": 11,
+    "image": "/images/cat8.jpg"
+  }
+]

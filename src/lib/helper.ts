@@ -4,3 +4,4 @@ export const translate = (key: string = '') => {
   if (!result) return key;
   return result
 }
+
