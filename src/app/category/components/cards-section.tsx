@@ -1,7 +1,9 @@
 import React from 'react';
 import CardCategory from '@/components/cards/card-category';
+
 import { getCategorieList } from '@/lib/data';
   const categories = getCategorieList();
+
 export const CardsSection = () => {
 
   return (
