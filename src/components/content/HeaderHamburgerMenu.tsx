@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Link from "next/link";
 import { translate } from '@/lib/helper';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Cancel01Icon } from '@hugeicons/core-free-icons';
 
 
   export interface NavigationItem {
@@ -22,11 +24,11 @@ export default function HeaderHamburgerMenu() {
 
 
   return (
-    <div className="md:hidden bg-amber-50">
+    <div className="md:hidden">
       {/* Hamburger Button */}
       <div
         onClick={() => setIsMenuOpen(true)}
-        className="flex flex-col justify-between w-6 h-5 focus:outline-none z-50 relative"
+        className="flex flex-col justify-between cursor-pointer w-6 h-5 focus:outline-none z-50 relative"
       >
         <span className="block h-0.5 w-full bg-black rounded"></span>
         <span className="block h-0.5 w-full bg-black rounded"></span>
@@ -50,30 +52,29 @@ export default function HeaderHamburgerMenu() {
         {/* Close Button */}
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="self-end p-4 text-black font-bold text-2xl hover:text-gray-600 transition-colors"
+          className="self-end p-4  font-bold text-2xl transition-colors"
         >
-          ×
+          <HugeiconsIcon className='cursor-pointer' icon={Cancel01Icon} />
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex flex-col gap-3 mt-8 px-4">
+        <nav className="flex flex-col  gap-3 mt-8 px-4">
           {navigationItems.map((item: NavigationItem) => (
-            <Link
+            <div
               key={item.href}
-              href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className="  transition-colors duration-200 hover:bg-[#AFAFAF] font-medium text-lg"
+              className="  font-medium text-lg"
             >
-              <div className='bg-gray-200 rounded-xl px-3 py-3'>
+              <div className='bg-gray-200 cursor-pointer  transition-colors duration-200 hover:bg-[#AFAFAF] rounded-xl px-3 py-3'>
               {translate(item.labelKey)}
               </div>
-            </Link>
+            </div>
           ))}
         </nav>
 
         {/* Optional Footer / Language / Search */}
         <div className="mt-auto px-6 py-6 border-t border-gray-200">
-          <div className="w-full text-center py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition-colors font-medium">
+          <div className="w-full text-center py-2 rounded-lg bg-gray-200 cursor-pointer  transition-colors duration-200 hover:bg-[#AFAFAF] font-medium">
             {translate('Fa')}
           </div>
         </div>

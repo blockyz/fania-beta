@@ -25,13 +25,13 @@ const navigationItems: NavigationItem[] = [
 
 const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
   Field: [
-{ label: 'Medical', imageSrc: '/images/medical.jpg' },
-{ label: 'Agriculture', imageSrc: '/images/agriculture.jpg' },
-{ label: 'GeologyAndMineralogy', imageSrc: '/images/geology.jpg' },
-{ label: 'SurveillanceAndSecurity', imageSrc: '/images/security.jpg' },
-{ label: 'LivestockAndPoultry', imageSrc: '/images/farming.jpg' },
-{ label: 'WaterDesalination', imageSrc: '/images/water.jpg' },
-{ label: 'MeteorologyAndRoadMaintenance', imageSrc: '/images/weather.jpg' },
+    { label: 'Medical', imageSrc: '/images/medical.jpg' },
+    { label: 'Agriculture', imageSrc: '/images/agriculture.jpg' },
+    { label: 'GeologyAndMineralogy', imageSrc: '/images/geology.jpg' },
+    { label: 'SurveillanceAndSecurity', imageSrc: '/images/security.jpg' },
+    { label: 'LivestockAndPoultry', imageSrc: '/images/farming.jpg' },
+    { label: 'WaterDesalination', imageSrc: '/images/water.jpg' },
+    { label: 'MeteorologyAndRoadMaintenance', imageSrc: '/images/weather.jpg' },
 
 
   ],
@@ -51,7 +51,7 @@ const Header: NextPage = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 relative">
+    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute top-0 left-0  bg-transparent z-10">
       {/* Logo */}
       <div className="flex items-center text-left text-[16px] font-inter">
         <Link href="/" className="flex items-center justify-end gap-4 hover:opacity-80 transition-opacity">

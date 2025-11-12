@@ -1,12 +1,11 @@
 import { TDictionary } from '../types/index'
 
 const FA_DICTIONARY: TDictionary = {
-  HeroSloganLine1: 'یه شعار از کارایی که دارید',
-  HeroSloganLine2: 'میکنید و هدف‌هایی که دارید',
-  HeroDescriptionLine1: 'توضیح خیلی کوتاه و واضح از اینکه توی حوزه‌های',
-  HeroDescriptionLine2: 'کارایی خودتون دقیقاً چه کارایی میکنید',
-  HeroPlayVideo: 'پخش ویدیو',
-  HeroScrollDown: 'به سمت پایین اسکرول کنید',
+  SloganLine1: 'یه شعار از کارایی که دارید',
+  SloganLine2: 'میکنید و هدف‌هایی که دارید',
+  DescriptionLine1: 'توضیح خیلی کوتاه و واضح از اینکه توی حوزه‌های',
+  DescriptionLine2: 'کارایی خودتون دقیقاً چه کارایی میکنید',
+  PlayVideo: 'پخش ویدیو',
   Logo: 'لوگو',
   Home: 'خانه',
   Field: 'حوزه فعالیت',
