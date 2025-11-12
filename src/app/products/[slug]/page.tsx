@@ -5,14 +5,14 @@ import { ProductDetails } from './components/ProductDetails'
 import { translate } from '@/lib/helper'
 
 interface ProductsDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-const ProductsDetailPage = ({ params }: ProductsDetailPageProps) => {
-  const product = getProductDetailBySlug(params.slug)
-  console.log("product", product)
+const ProductsDetailPage = async ({ params }: ProductsDetailPageProps) => {
+  const { slug } = await params
+  const product = getProductDetailBySlug(slug)
   if (!product) {
     return (
       <div className="w-full min-h-screen flex items-center justify-center">
