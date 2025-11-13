@@ -11,6 +11,7 @@ export default function CardsSection() {
           <ProductCard
             title={product.title}
             description={product.description}
+            id={product.id}
           />
         </div>
       ))}
