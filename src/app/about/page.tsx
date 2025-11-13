@@ -16,7 +16,7 @@ const featuresData = getAboutFeaturesData()
 const featureCards = getAboutFeatureCards()
 const AboutPage = () => {
   return (
-    <div className='flex flex-col items-center gap-12 ' dir='rtl'>
+    <div className='flex flex-col items-center gap-12 '>
       <div className='w-[1408px] h-[721px] bg-darkgray rounded-[40px] relative overflow-hidden'>
         <div className='absolute right-20 top-1/2 -translate-y-1/2 w-[560px]'>
           <h1 className='text-[48px] leading-[72px] text-black mb-6'>

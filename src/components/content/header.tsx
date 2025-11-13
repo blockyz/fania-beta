@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { translate } from '@/lib/helper';
 import { Button } from '../button/default-button';
-import HeaderHamburgerMenu from './HeaderHamburgerMenu';
-import PopupCard from '../PopUp/PopupCard';
+import HeaderHamburgerMenu from './header-hamburger-menu';
+import PopupCard from './popup-card';
 import { Search01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 
@@ -36,9 +36,9 @@ const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
 
   ],
   Events: [
-    { label: 'Event1', imageSrc: '/images/event1.jpg' },
-    { label: 'Event2', imageSrc: '/images/event2.jpg' },
-    { label: 'Event3', imageSrc: '/images/event3.jpg' },
+    { label: 'Event 1', imageSrc: '/images/event1.jpg' },
+    { label: 'Event 2', imageSrc: '/images/event2.jpg' },
+    { label: 'Event 3', imageSrc: '/images/event3.jpg' },
   ],
 };
 
