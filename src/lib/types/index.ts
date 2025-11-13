@@ -70,7 +70,7 @@ export interface IStatistic {
 }
 
 
-export interface Iinnovation {
+export interface IInnovation {
   id: number
   title: string
   description: string

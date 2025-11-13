@@ -9,10 +9,10 @@ const FA_DICTIONARY: TDictionary = {
   Fa: 'فارسی',
   En: 'انگلیسی',
   QuickLinks: 'لینک های سریع',
-  ContactUs : 'تماس با ما',
+  ContactUs: 'تماس با ما',
   Pages: 'صفحات',
-  Blog:'مقالات',
-  Certificates : 'مدارک و گواهینامه ها',
+  Blog: 'مقالات',
+  Certificates: 'مدارک و گواهینامه ها',
   SocialMedia: 'شبکه های اجتماعی',
   Address: 'آدرس',
   Tehran: 'تهران ، خیابان طالقانی ، خیابان امام خمینی ، خیابان امام رضا ، خیابان امام هشتم ...',
@@ -53,14 +53,14 @@ const FA_DICTIONARY: TDictionary = {
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
   // event item
-  Event1:"نمایشگاه 1",
-  Event2:"نمایشگاه 2",
-  Event3:"نمایشگاه 3",
+  Event1: "نمایشگاه 1",
+  Event2: "نمایشگاه 2",
+  Event3: "نمایشگاه 3",
   category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
 
   // نوآوری 
-   latestInnovation: "آخرین نوآوری ما",
-  inAllFields: "در تمامی حوزه‌های فعالیت"
+  LatestInnovation: "آخرین نوآوری ما",
+  InAllFields: "در تمامی حوزه‌های فعالیت"
 }
 export default FA_DICTIONARY

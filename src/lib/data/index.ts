@@ -1,4 +1,4 @@
-import { IExhibition, ICategory, IEventDetail , IStatistic , ICertification , IBlogDetail, Iinnovation} from '../types/index';
+import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, IInnovation } from '../types/index';
 import certifications from "./certifications.json"
 import categoriesData from './categories.json';
 import aboutData from './about.json'
@@ -51,6 +51,6 @@ export const getStatistics = (): IStatistic[] => {
   return statisticsData
 }
 
-export const getInnovation = (): Iinnovation[] => {
-  return innovation as Iinnovation[]
+export const getInnovation = (): IInnovation[] => {
+  return innovation as IInnovation[]
 }

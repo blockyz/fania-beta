@@ -1,5 +1,5 @@
 import { getInnovation } from "@/lib/data"
-import InnovationCard from "./InnovationCard"
+import InnovationCard from "./innovation-card"
 
 const Innovation = () => {
   const data = getInnovation()
