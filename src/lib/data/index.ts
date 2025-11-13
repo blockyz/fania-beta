@@ -7,7 +7,7 @@ import exhibitions from './exhibitions.json'
 import blogDetail from "./blogDetail.json"
 import eventDetail from "./eventDetail.json"
 import statisticsData from './statistics.json'
-import productDetailData from './productDetail.json'
+import productDetailData from './product-detail.json'
 
 export const getCertifications = (): ICertification[] => {
   return certifications

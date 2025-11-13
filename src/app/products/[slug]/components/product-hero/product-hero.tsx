@@ -1,7 +1,7 @@
 import React from 'react'
 import { IProductDetail } from '@/lib/types'
-import { ProductGallery } from './ProductGallery'
-import { ProductInfo } from './ProductInfo'
+import { ProductGallery } from './product-gallery'
+import { ProductInfo } from './product-info'
 
 interface ProductHeroProps {
   product: IProductDetail
