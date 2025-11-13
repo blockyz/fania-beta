@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { translate } from '@/lib/helper';
 import { Button } from '../button/default-button';
 import HeaderHamburgerMenu from './header-hamburger-menu';
-import PopupCard from './popup-card';
+import PopupCard from '../cards/popup-card';
 import { Search01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 

@@ -53,6 +53,8 @@ const FA_DICTIONARY: TDictionary = {
   Collaborations: 'همکاری‌ها',
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
+  LatestInnovation: "آخرین نوآوری ما",
+  InAllFields: "در تمامی حوزه‌های فعالیت",
   Event: "نمایشگاه",
   Category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',

@@ -2,6 +2,7 @@ import ProductsCategory from "./components/product-category";
 import ExhibitionsSection from "./components/exhibitions";
 import { Statistics } from "./components/statistics";
 import HeroSection from "@/components/content/hero-section";
+import Innovation from "./components/innovation";
 
 export default function Home() {
   return (<>
@@ -16,6 +17,9 @@ export default function Home() {
     </div>
     <div className="lg:w-[1360px] w-[390px] mx-auto">
       <ExhibitionsSection />
+    </div>
+    <div>
+      <Innovation />
     </div>
   </>
   );

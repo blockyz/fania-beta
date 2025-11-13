@@ -1,5 +1,4 @@
-
-import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, ILandingHero, IEventItem } from '../types/index';
+import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, ILandingHero, IEventItem, IInnovation } from '../types/index';
 import events from "./events.json"
 import certifications from "./certifications.json"
 import categoriesData from './categories.json';
@@ -9,6 +8,7 @@ import exhibitions from './exhibitions.json'
 import blogDetail from "./blog-detail.json"
 import eventDetail from "./event-detail.json"
 import statisticsData from './statistics.json'
+import innovation from './innovation.json'
 import blogsData from './blogs.json'
 import heroSection from './hero-section.json'
 
@@ -64,6 +64,9 @@ export const getStatistics = (): IStatistic[] => {
   return statisticsData
 }
 
+export const getInnovation = (): IInnovation[] => {
+  return innovation as IInnovation[]
+}
 export const getLandingHero = (): ILandingHero => {
   return heroSection;
 };
