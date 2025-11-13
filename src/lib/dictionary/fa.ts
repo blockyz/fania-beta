@@ -1,8 +1,11 @@
 import { TDictionary } from '../types/index'
 
 const FA_DICTIONARY: TDictionary = {
-  Logo: 'لوگو',
+  PlayVideo: 'پخش ویدیو',
   Home: 'خانه',
+  AllExhibitionsAndAwards: "همه نمایشگاه ها و افتخارات ما",
+  AcrossAllFields: "در تمامی حوزه ها",
+  Logo: 'لوگو',
   Field: 'حوزه فعالیت',
   Events: 'نمایشگاه ها و افتخارات',
   AboutUs: 'درباره ما',
@@ -23,7 +26,6 @@ const FA_DICTIONARY: TDictionary = {
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',
-  // 
   Medical: 'پزشکی',
   Agriculture: 'کشاورزی',
   GeologyAndMineralogy: 'زمین‌شناسی و ژئولوژی',
@@ -31,7 +33,6 @@ const FA_DICTIONARY: TDictionary = {
   LivestockAndPoultry: 'دامداری و مرغداری',
   WaterDesalination: 'شیرین‌سازی آب',
   MeteorologyAndRoadMaintenance: 'هواشناسی و راهداری',
-  // 
   Exhibitions: 'نمایشگاه ها',
   RecentOpenings: 'افتخارات اخیر ما',
   ExhibitionTitle: 'نمایشگاه بزرگ علمی',
@@ -52,15 +53,11 @@ const FA_DICTIONARY: TDictionary = {
   Collaborations: 'همکاری‌ها',
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
-  // event item
-  Event1: "نمایشگاه 1",
-  Event2: "نمایشگاه 2",
-  Event3: "نمایشگاه 3",
-  category: 'دسته بندی',
-  OurAreasofExpertise: 'حوزه های فعالیت ما',
-
-  // نوآوری 
   LatestInnovation: "آخرین نوآوری ما",
-  InAllFields: "در تمامی حوزه‌های فعالیت"
+  InAllFields: "در تمامی حوزه‌های فعالیت",
+  Event: "نمایشگاه",
+  Category: 'دسته بندی',
+  OurAreasofExpertise: 'حوزه های فعالیت ما',
+  OurAcademicAndProfessionalDomain: "علمی و تخصصی ما",
 }
 export default FA_DICTIONARY

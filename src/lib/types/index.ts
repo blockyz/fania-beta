@@ -43,6 +43,15 @@ export interface IBlogDetail {
   detailTitleKey: string;
   description: string;
 }
+
+export interface IEventItem {
+  id: string
+  title: string
+  location: string
+  image: string
+  describe: string
+}
+
 export interface IEventDetail {
   id: string;
   title: string;
@@ -69,11 +78,16 @@ export interface IStatistic {
   label: string;
 }
 
-
 export interface IInnovation {
   id: number
   title: string
   description: string
   mainImage: string
   thumbnail: string
+}
+export interface ILandingHero {
+  SloganLine1: string;
+  SloganLine2: string;
+  DescriptionLine1: string;
+  DescriptionLine2: string;
 }
