@@ -4,9 +4,9 @@ import type { NextPage } from 'next';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { translate } from '@/lib/helper';
-import { Button } from '../button/default-button';
+import { Button } from '../../button/default-button';
 import HeaderHamburgerMenu from './header-hamburger-menu';
-import PopupCard from '../cards/popup-card';
+import PopupCard from './popup-card';
 import { Search01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 

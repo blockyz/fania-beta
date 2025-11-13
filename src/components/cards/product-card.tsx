@@ -7,7 +7,6 @@ import { PrimaryButton } from '../button/primary-button';
 export const ProductCard = ({
   title,
   description,
-  onDetailsClick
 }: IProductCard) => {
   return (
     <div className="w-[328px] h-[501px] bg-whitesmoke rounded-2xl shadow-md p-6 flex flex-col">
@@ -30,7 +29,6 @@ export const ProductCard = ({
           size="lg"
           radius="lg"
           className="w-full"
-          onClick={onDetailsClick}
         >
           {translate('MoreDetails')}
         </PrimaryButton>
