@@ -58,6 +58,10 @@ const FA_DICTIONARY: TDictionary = {
   Event: "نمایشگاه",
   Category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
-  OurAcademicAndProfessionalDomain: "علمی و تخصصی ما",
+  ContactPhone: 'تلفن تماس',
+  Weight: 'وزن',
+  ProductSpecifications: 'مشخصات محصول',
+  ProductNotFound: 'محصول یافت نشد',
+  ProductDescriptions: 'توضیحات',
 }
 export default FA_DICTIONARY

@@ -1,4 +1,4 @@
-import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, ILandingHero, IEventItem, IInnovation } from '../types/index';
+import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, IProductDetail, ILandingHero, IEventItem, IInnovation } from '../types/index';
 import events from "./events.json"
 import certifications from "./certifications.json"
 import categoriesData from './categories.json';
@@ -11,6 +11,7 @@ import statisticsData from './statistics.json'
 import innovation from './innovation.json'
 import blogsData from './blogs.json'
 import heroSection from './hero-section.json'
+import productDetailData from './product-detail.json'
 
 export const getCertifications = (): ICertification[] => {
   return certifications
@@ -62,6 +63,10 @@ export const getEventDetail = (): IEventDetail => {
 
 export const getStatistics = (): IStatistic[] => {
   return statisticsData
+}
+
+export const getProductDetailBySlug = (slug: string): IProductDetail | undefined => {
+  return productDetailData.find(product => product.slug === slug)
 }
 
 export const getInnovation = (): IInnovation[] => {
