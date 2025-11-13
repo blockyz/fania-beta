@@ -1,117 +1,122 @@
 'use client';
 
 import type { NextPage } from 'next';
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { translate } from '../../lib/helper'
-
+import { translate } from '@/lib/helper';
+import { Button } from '../button/default-button';
+import HeaderHamburgerMenu from './header-hamburger-menu';
+import PopupCard from '../cards/popup-card';
+import { Search01Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 
 interface NavigationItem {
   href: string;
-  label: string
+  labelKey: string;
+  hasPopup?: boolean;
 }
 
 const navigationItems: NavigationItem[] = [
-  { href: "/", label: 'Home' },
-  // { href: "/products", label: { fa: "حوزه فعالیت", en: "Products" } }, //need to fix
-  // { href: "/certificates", label: { fa: "گواهینامه ها", en: "Certificates" } },
-  // { href: "/events", label: { fa: "نمایشگاه ها", en: "Events" } },
-  // { href: "/blog", label: { fa: "وبلاگ", en: "Blog" } },
-  // { href: "/about", label: { fa: "درباره ما", en: "About Us" } },
+  { href: "/", labelKey: 'Home' },
+  { href: "/Field", labelKey: 'Field', hasPopup: true },
+  { href: "/events", labelKey: 'Events', hasPopup: true },
+  { href: "/about", labelKey: 'AboutUs' },
 ];
+
+const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
+  Field: [
+    { label: 'Medical', imageSrc: '/images/medical.jpg' },
+    { label: 'Agriculture', imageSrc: '/images/agriculture.jpg' },
+    { label: 'GeologyAndMineralogy', imageSrc: '/images/geology.jpg' },
+    { label: 'SurveillanceAndSecurity', imageSrc: '/images/security.jpg' },
+    { label: 'LivestockAndPoultry', imageSrc: '/images/farming.jpg' },
+    { label: 'WaterDesalination', imageSrc: '/images/water.jpg' },
+    { label: 'MeteorologyAndRoadMaintenance', imageSrc: '/images/weather.jpg' },
+
+
+  ],
+  Events: [
+    { label: 'Event 1', imageSrc: '/images/event1.jpg' },
+    { label: 'Event 2', imageSrc: '/images/event2.jpg' },
+    { label: 'Event 3', imageSrc: '/images/event3.jpg' },
+  ],
+};
 
 const Header: NextPage = () => {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActivePath = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
-  const toggleLanguage = () => {
-
-  };
-
   return (
-    <header className="w-full relative flex items-center justify-between gap-5 text-right text-num-14 text-black bg-white border-b border-gray-200 px-4 py-3">
-      {/* Language Toggle */}
-      <div className="flex items-center justify-center gap-4">
-        <button
-          onClick={toggleLanguage}
-          className="rounded-num-999 bg-whitesmoke flex items-center justify-center py-2.5 px-num-16 gap-2 hover:bg-gray-200 transition-colors"
-        >
-          <div className="relative tracking-num--0_16 leading-num-20 font-medium">
-            Fa
-          </div>
-          <div className="h-1 w-1 relative rounded-[50%] bg-gray" />
-        </button>
-      </div>
-
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center justify-center gap-4">
-        {navigationItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`rounded-num-999 flex items-center justify-center py-3 px-num-16 gap-2 transition-colors hover:bg-gray-100 ${isActivePath(item.href)
-              ? 'bg-black text-white'
-              : 'bg-whitesmoke'
-              }`}
-          >
-            <div className="relative tracking-num--0_16 leading-num-20 font-semibold">
-              {translate(item.label)}
-            </div>
-            {!isActivePath(item.href) && (
-              <div className="h-1 w-1 relative rounded-[50%] bg-gray" />
-            )}
-          </Link>
-        ))}
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden flex flex-col items-center justify-center w-8 h-8 gap-1"
-        aria-label="Toggle menu"
-      >
-        <div className={`w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-        <div className={`w-6 h-0.5 bg-black transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
-        <div className={`w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
-      </button>
-
+    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute  top-0 left-0  bg-transparent z-10 ">
       {/* Logo */}
       <div className="flex items-center text-left text-[16px] font-inter">
         <Link href="/" className="flex items-center justify-end gap-4 hover:opacity-80 transition-opacity">
-          <b className="relative">LOGO</b>
-          <div className="h-12 w-12 relative rounded-[50%] bg-darkgray" />
+          <div className="h-12 w-12 relative rounded-full bg-[#AFAFAF]" />
+          <b className="relative">{translate('Logo')}</b>
         </Link>
       </div>
 
-      {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg md:hidden z-50">
-          <nav className="flex flex-col p-4 gap-2">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`rounded-num-999 flex items-center justify-center py-3 px-num-16 transition-colors hover:bg-gray-100 ${isActivePath(item.href)
-                  ? 'bg-black text-white'
-                  : 'bg-whitesmoke'
-                  }`}
-              >
-                <div className="relative tracking-num--0_16 leading-num-20 font-semibold">
-                  {translate(item.label)}
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:flex items-center justify-center gap-4 max-w-[calc(100vw-2rem)] ">
+        {navigationItems.map((item) => (
+          <div key={item.href} className="relative group">
+            <Button
+              className={`rounded-num-999 cursor-pointer flex items-center justify-center py-3 px-num-16 gap-2 transition-colors
+        ${isActivePath(item.href) ? 'bg-[#F9F9FB]' : 'bg-whitesmoke hover:bg-gray-100'}`}
+            >
+              <div className="flex items-center gap-2">
+                {(item.labelKey !== 'Home' && item.labelKey !== 'AboutUs') && (
+                  <span className="bg-black rounded-full inline-block transition-all duration-200 group-hover:w-2 group-hover:h-2 w-1 h-1" />
+                )}
+                <span className="tracking-num--0_16 leading-num-20 font-semibold text-black text-nowrap">
+                  {translate(item.labelKey)}
+                </span>
+              </div>
+            </Button>
+
+            {item.hasPopup && (
+              <>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-10 h-4 group-hover:block hidden" />
+                <div
+                  className="absolute top-[calc(100%+1rem)] left-1/2 -translate-x-1/2 opacity-0 invisible
+            group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 "
+                >
+                  <PopupCard
+                    items={popupData[item.labelKey]}
+                    onClose={() => { }}
+                  />
                 </div>
-              </Link>
-            ))}
-          </nav>
+              </>
+            )}
+          </div>
+        ))}
+      </nav>
+
+
+      {/* Language & Search */}
+      <div className="hidden lg:flex items-center justify-center gap-4 ">
+        <div className="w-10 h-10 rounded-full bg-whitesmoke flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
+          <HugeiconsIcon icon={Search01Icon} />
         </div>
-      )}
+        <Button
+          size='md'
+          radius="full"
+          className="bg-whitesmoke hover:bg-gray-200 cursor-pointer flex items-center justify-between gap-2 px-num-10 py-2.5 text-black"
+          textClassName="tracking-num--0_16 leading-num-20 font-medium"
+        >
+          <div className='flex gap-2 items-center'>
+            <span className="w-1 h-1 bg-black rounded-full inline-block" />
+            <div className='w-6 h-6 flex items-center bg-[#AFAFAF] rounded-full' />
+            {translate('Fa')}
+          </div>
+        </Button>
+      </div>
+
+      <HeaderHamburgerMenu />
     </header>
   );
 };

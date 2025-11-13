@@ -1,10 +1,10 @@
 import React from 'react'
 import { UserGroupIcon } from '@hugeicons/core-free-icons'
-import HeroSection from '@/components/sections/hero-section'
-import BriefIntroductionSection from '@/components/sections/brief-introduction-section'
-import FeatureCardsSection from '@/components/sections/feature-sections/feature-cards-section'
+import HeroSection from '@/components/content/hero-section'
+import BriefIntroductionSection from '@/components/content/brief-introduction-section'
 import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFeatureCards } from '@/lib/data'
 import { translate } from '@/lib/helper'
+import FeatureCardsSection from './components/feature-cards-section'
 
 export const metadata = {
   title: translate('AboutUs'),

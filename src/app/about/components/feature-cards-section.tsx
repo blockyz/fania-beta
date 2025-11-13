@@ -1,5 +1,5 @@
 import React from 'react'
-import FeatureCard from './feature-card'
+import FeatureCard from '../../cards/feature-card'
 import { HugeiconsIconProps } from '@hugeicons/react'
 
 type IconType = HugeiconsIconProps['icon']
