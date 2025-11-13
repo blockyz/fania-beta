@@ -1,6 +1,6 @@
 import React from 'react'
 import { UserGroupIcon } from '@hugeicons/core-free-icons'
-import HeroSection from '@/components/content/hero-section'
+import HeroSection from '@/app/about/components/hero-section'
 import BriefIntroductionSection from '@/components/content/brief-introduction-section'
 import { getAboutHeroData, getAboutMiddleData, getAboutFeaturesData, getAboutFeatureCards } from '@/lib/data'
 import { translate } from '@/lib/helper'
