@@ -43,6 +43,15 @@ export interface IBlogDetail {
   detailTitleKey: string;
   description: string;
 }
+
+export interface IEventItem {
+  id: string
+  title: string
+  location: string
+  image: string
+  describe: string
+}
+
 export interface IEventDetail {
   id: string;
   title: string;
