@@ -2,7 +2,6 @@ import { TDictionary } from '../types/index'
 
 const FA_DICTIONARY: TDictionary = {
   PlayVideo: 'پخش ویدیو',
-  Logo: 'لوگو',
   Home: 'خانه',
   AllExhibitionsAndAwards: "همه نمایشگاه ها و افتخارات ما",
   AcrossAllFields: "در تمامی حوزه ها",
