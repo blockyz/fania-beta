@@ -1,8 +1,10 @@
 import { TDictionary } from '../types/index'
 
 const FA_DICTIONARY: TDictionary = {
-  Logo: 'لوگو',
   Home: 'خانه',
+  AllExhibitionsAndAwards: "همه نمایشگاه ها و افتخارات ما",
+  AcrossAllFields: "در تمامی حوزه ها",
+  Logo: 'لوگو',
   Field: 'حوزه فعالیت',
   Events: 'نمایشگاه ها و افتخارات',
   AboutUs: 'درباره ما',

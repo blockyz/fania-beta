@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+
     "@hugeicons/core-free-icons": "^1.2.1",
     "@hugeicons/react": "^1.1.1",
     "next": "15.5.6",
