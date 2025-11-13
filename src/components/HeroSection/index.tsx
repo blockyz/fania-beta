@@ -13,12 +13,12 @@ export default function HeroSection() {
       <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row items-start justify-between px-6 md:px-12 lg:px-16 gap-10 md:gap-6 pt-32 md:pt-0">
         <div className="flex flex-col gap-4 text-right">
           <h2 className="text-[32px] sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-black">
-            {translate(heroData.SloganLine1)}<br />
-            {translate(heroData.SloganLine2)}
+            {(heroData.SloganLine1)}<br />
+            {(heroData.SloganLine2)}
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium leading-relaxed">
-            {translate(heroData.DescriptionLine1)}<br />
-            {translate(heroData.DescriptionLine2)}
+            {(heroData.DescriptionLine1)}<br />
+            {(heroData.DescriptionLine2)}
           </p>
         </div>
       </div>
