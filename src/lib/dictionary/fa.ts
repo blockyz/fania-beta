@@ -56,5 +56,6 @@ const FA_DICTIONARY: TDictionary = {
   Event: "نمایشگاه",
   Category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
+  OurAcademicAndProfessionalDomain: "علمی و تخصصی ما",
 }
 export default FA_DICTIONARY
