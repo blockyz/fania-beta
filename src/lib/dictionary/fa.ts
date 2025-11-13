@@ -23,7 +23,6 @@ const FA_DICTIONARY: TDictionary = {
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',
-  // 
   Medical: 'پزشکی',
   Agriculture: 'کشاورزی',
   GeologyAndMineralogy: 'زمین‌شناسی و ژئولوژی',
@@ -31,7 +30,6 @@ const FA_DICTIONARY: TDictionary = {
   LivestockAndPoultry: 'دامداری و مرغداری',
   WaterDesalination: 'شیرین‌سازی آب',
   MeteorologyAndRoadMaintenance: 'هواشناسی و راهداری',
-  // 
   Exhibitions: 'نمایشگاه ها',
   RecentOpenings: 'افتخارات اخیر ما',
   ExhibitionTitle: 'نمایشگاه بزرگ علمی',
@@ -52,15 +50,8 @@ const FA_DICTIONARY: TDictionary = {
   Collaborations: 'همکاری‌ها',
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
-
-  category: 'دسته بندی',
+  Category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
-  articles: 'مقالات',
   OurAcademicAndProfessionalDomain: "علمی و تخصصی ما",
-  moreAbout: "جزئیات بیشتر",
-  Event1: "نمایشگاه 1",
-  Event2: "نمایشگاه 2",
-  Event3: "نمایشگاه 3",
-
 }
 export default FA_DICTIONARY
