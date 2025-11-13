@@ -77,3 +77,9 @@ export interface IStatistic {
   value: string;
   label: string;
 }
+export interface ILandingHero {
+  SloganLine1: string;
+  SloganLine2: string;
+  DescriptionLine1: string;
+  DescriptionLine2: string;
+}
