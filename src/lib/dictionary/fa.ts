@@ -63,5 +63,7 @@ const FA_DICTIONARY: TDictionary = {
   ProductSpecifications: 'مشخصات محصول',
   ProductNotFound: 'محصول یافت نشد',
   ProductDescriptions: 'توضیحات',
+  OurProducts: 'محصولات ما',
+  ToEnterTechnologies: 'در راستای ورود به فناوریهای',
 }
 export default FA_DICTIONARY
