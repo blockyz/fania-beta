@@ -1,8 +1,8 @@
 import ProductsCategory from "./components/product-category";
 import ExhibitionsSection from "./components/exhibitions";
 import { Statistics } from "./components/statistics";
-import HeroSection from "@/components/content/hero-section";
 import Innovation from "./components/innovation";
+import HeroSection from "./components/hero-section";
 
 export default function Home() {
   return (<>
