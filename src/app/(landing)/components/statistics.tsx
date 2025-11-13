@@ -1,7 +1,7 @@
 import React from 'react';
 import { translate } from '@/lib/helper';
 import { getStatistics } from '@/lib/data';
-import { StatisticCard } from '@/components/content/statistic-card';
+import { StatisticCard } from '@/components/cards/statistic-card';
 
 const statistics = getStatistics();
 export const Statistics = () => {

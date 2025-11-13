@@ -1,6 +1,6 @@
 import ProductsCategory from "./components/product-category";
 import ExhibitionsSection from "./components/exhibitions";
-import Innovation from "./components/Innovation";
+import Innovation from "./components/innovation";
 import { Statistics } from "./components/statistics";
 import HeroSection from "@/components/content/hero-section";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <ExhibitionsSection />
     </div>
     <div>
-      <Innovation/>
+      <Innovation />
     </div>
   </>
   );
