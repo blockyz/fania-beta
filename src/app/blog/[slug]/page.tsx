@@ -1,9 +1,9 @@
 import React from 'react'
-import DetailDescription from './components/DetailDescription'
-import DetailImages from './components/DetailImages'
-import SecondDescription from './components/SecondDescription'
+import DetailDescription from './components/detail-description'
+import DetailImages from './components/detail-images'
+import SecondDescription from './components/second-description'
 import { translate } from '@/lib/helper'
-import BlogHero from './components/BlogHero/BlogHero'
+import BlogHero from './components/blog-hero'
 
 const BlogDetailPage = () => {
   return (

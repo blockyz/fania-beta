@@ -5,7 +5,7 @@ export default function CategoryMidelSection() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-12 px-4 text-center">
       <p className="text-gray-500 text-sm mb-4 tracking-wide font-medium">
-        {translate('category')}
+        {translate('Category')}
       </p>
 
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">

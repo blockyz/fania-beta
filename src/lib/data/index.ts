@@ -1,16 +1,24 @@
-import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, IProductDetail } from '../types/index';
+import { IExhibition, ICategory, IEventDetail, IStatistic, ICertification, IBlogDetail, IProductDetail, ILandingHero, IEventItem, IInnovation } from '../types/index';
+import events from "./events.json"
 import certifications from "./certifications.json"
 import categoriesData from './categories.json';
 import aboutData from './about.json'
 import productCardData from './product-card.json';
 import exhibitions from './exhibitions.json'
-import blogDetail from "./blogDetail.json"
-import eventDetail from "./eventDetail.json"
+import blogDetail from "./blog-detail.json"
+import eventDetail from "./event-detail.json"
 import statisticsData from './statistics.json'
+import innovation from './innovation.json'
+import blogsData from './blogs.json'
+import heroSection from './hero-section.json'
 import productDetailData from './product-detail.json'
 
 export const getCertifications = (): ICertification[] => {
   return certifications
+};
+
+export const getBlogsList = () => {
+  return blogsData;
 };
 
 export const getCategoriesList = (): ICategory[] => {
@@ -44,9 +52,15 @@ export const getAboutFeatureCards = () => {
 export const getBlogDetail = (): IBlogDetail => {
   return blogDetail
 }
+
+export const getEvents = (): IEventItem[] => {
+  return events
+}
+
 export const getEventDetail = (): IEventDetail => {
   return eventDetail
 }
+
 export const getStatistics = (): IStatistic[] => {
   return statisticsData
 }
@@ -55,3 +69,9 @@ export const getProductDetailBySlug = (slug: string): IProductDetail | undefined
   return productDetailData.find(product => product.slug === slug)
 }
 
+export const getInnovation = (): IInnovation[] => {
+  return innovation as IInnovation[]
+}
+export const getLandingHero = (): ILandingHero => {
+  return heroSection;
+};

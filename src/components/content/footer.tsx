@@ -2,7 +2,7 @@
 import { JSX } from "react";
 import Link from "next/link";
 import { translate } from "@/lib/helper";
-import { InstagramIcon, TelegramIcon, WhatsappIcon } from "@/assets/Icons";
+import { InstagramIcon, TelegramIcon, WhatsappIcon } from "../../../public/assets/Icons";
 
 interface FooterLink {
   href: string;

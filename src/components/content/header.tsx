@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { translate } from '@/lib/helper';
 import { Button } from '../button/default-button';
-import HeaderHamburgerMenu from './HeaderHamburgerMenu';
-import PopupCard from '../PopUp/PopupCard';
+import HeaderHamburgerMenu from './header-hamburger-menu';
+import PopupCard from '../cards/popup-card';
 import { Search01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 
@@ -25,20 +25,20 @@ const navigationItems: NavigationItem[] = [
 
 const popupData: Record<string, { label: string; imageSrc: string; }[]> = {
   Field: [
-{ label: 'Medical', imageSrc: '/images/medical.jpg' },
-{ label: 'Agriculture', imageSrc: '/images/agriculture.jpg' },
-{ label: 'GeologyAndMineralogy', imageSrc: '/images/geology.jpg' },
-{ label: 'SurveillanceAndSecurity', imageSrc: '/images/security.jpg' },
-{ label: 'LivestockAndPoultry', imageSrc: '/images/farming.jpg' },
-{ label: 'WaterDesalination', imageSrc: '/images/water.jpg' },
-{ label: 'MeteorologyAndRoadMaintenance', imageSrc: '/images/weather.jpg' },
+    { label: 'Medical', imageSrc: '/images/medical.jpg' },
+    { label: 'Agriculture', imageSrc: '/images/agriculture.jpg' },
+    { label: 'GeologyAndMineralogy', imageSrc: '/images/geology.jpg' },
+    { label: 'SurveillanceAndSecurity', imageSrc: '/images/security.jpg' },
+    { label: 'LivestockAndPoultry', imageSrc: '/images/farming.jpg' },
+    { label: 'WaterDesalination', imageSrc: '/images/water.jpg' },
+    { label: 'MeteorologyAndRoadMaintenance', imageSrc: '/images/weather.jpg' },
 
 
   ],
   Events: [
-    { label: 'Event1', imageSrc: '/images/event1.jpg' },
-    { label: 'Event2', imageSrc: '/images/event2.jpg' },
-    { label: 'Event3', imageSrc: '/images/event3.jpg' },
+    { label: 'Event 1', imageSrc: '/images/event1.jpg' },
+    { label: 'Event 2', imageSrc: '/images/event2.jpg' },
+    { label: 'Event 3', imageSrc: '/images/event3.jpg' },
   ],
 };
 
@@ -51,7 +51,7 @@ const Header: NextPage = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 relative">
+    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute  top-0 left-0  bg-transparent z-10 ">
       {/* Logo */}
       <div className="flex items-center text-left text-[16px] font-inter">
         <Link href="/" className="flex items-center justify-end gap-4 hover:opacity-80 transition-opacity">
@@ -61,7 +61,7 @@ const Header: NextPage = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center justify-center gap-4">
+      <nav className="hidden lg:flex items-center justify-center gap-4 max-w-[calc(100vw-2rem)] ">
         {navigationItems.map((item) => (
           <div key={item.href} className="relative group">
             <Button
@@ -83,7 +83,7 @@ const Header: NextPage = () => {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-10 h-4 group-hover:block hidden" />
                 <div
                   className="absolute top-[calc(100%+1rem)] left-1/2 -translate-x-1/2 opacity-0 invisible
-            group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+            group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 "
                 >
                   <PopupCard
                     items={popupData[item.labelKey]}
@@ -98,7 +98,7 @@ const Header: NextPage = () => {
 
 
       {/* Language & Search */}
-      <div className="hidden md:flex items-center justify-center gap-4">
+      <div className="hidden lg:flex items-center justify-center gap-4 ">
         <div className="w-10 h-10 rounded-full bg-whitesmoke flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer">
           <HugeiconsIcon icon={Search01Icon} />
         </div>
