@@ -1,10 +1,6 @@
 import { TDictionary } from '../types/index'
 
 const FA_DICTIONARY: TDictionary = {
-  SloganLine1: 'یه شعار از کارایی که دارید',
-  SloganLine2: 'میکنید و هدف‌هایی که دارید',
-  DescriptionLine1: 'توضیح خیلی کوتاه و واضح از اینکه توی حوزه‌های',
-  DescriptionLine2: 'کارایی خودتون دقیقاً چه کارایی میکنید',
   PlayVideo: 'پخش ویدیو',
   Logo: 'لوگو',
   Home: 'خانه',
@@ -28,7 +24,6 @@ const FA_DICTIONARY: TDictionary = {
   Products: 'محصول',
   ProductsCategory: 'دسته بندی محصولات',
   ActivityFieldsDisplay: 'نمایش حوزه های فعالیت',
-  // 
   Medical: 'پزشکی',
   Agriculture: 'کشاورزی',
   GeologyAndMineralogy: 'زمین‌شناسی و ژئولوژی',
@@ -36,7 +31,6 @@ const FA_DICTIONARY: TDictionary = {
   LivestockAndPoultry: 'دامداری و مرغداری',
   WaterDesalination: 'شیرین‌سازی آب',
   MeteorologyAndRoadMaintenance: 'هواشناسی و راهداری',
-  // 
   Exhibitions: 'نمایشگاه ها',
   RecentOpenings: 'افتخارات اخیر ما',
   ExhibitionTitle: 'نمایشگاه بزرگ علمی',
@@ -57,7 +51,6 @@ const FA_DICTIONARY: TDictionary = {
   Collaborations: 'همکاری‌ها',
   PublishedProducts: 'محصولات انتشار‌شده',
   InProgress: 'در دست ساخت...',
-  // event item
   Event1:"نمایشگاه 1",
   Event2:"نمایشگاه 2",
   Event3:"نمایشگاه 3",
