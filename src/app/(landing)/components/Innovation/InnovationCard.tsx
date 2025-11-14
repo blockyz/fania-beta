@@ -14,7 +14,6 @@ const InnovationCard: React.FC<Props> = ({ data }) => {
 
   return (
     <div className="flex flex-col px-4 md:px-0 lg:flex-row gap-6 items-start justify-center">
-      {/* 🟢 بخش سمت راست - عنوان و توضیح */}
       <div className="w-full lg:w-[668px] lg:h-[669px] bg-[#FAFAFA] rounded-4xl p-10 flex flex-col justify-between">
         <div>
           <h5 className="text-black text-[32px]  text-nowrap mb-2 font-bold">
@@ -32,7 +31,6 @@ const InnovationCard: React.FC<Props> = ({ data }) => {
           </p>
         </div>
 
-        {/* 🟢 عکس‌های کوچک پایین */}
         <div className="flex justify-between mt-8 gap-2">
           {data.map((item) => (
             <div
@@ -58,7 +56,6 @@ const InnovationCard: React.FC<Props> = ({ data }) => {
         </div>
       </div>
 
-      {/* 🟢 بخش سمت چپ - عکس بزرگ */}
       <div className="hidden lg:flex w-[668px] h-[669px] bg-[#FAFAFA] rounded-4xl p-8 items-center justify-center overflow-hidden">
         <Image
           src={selected.mainImage}
