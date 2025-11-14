@@ -51,7 +51,7 @@ const Header: NextPage = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute overflow-hidden top-0 left-0  bg-transparent z-10 overflow-x-hidden">
+    <header className="w-full flex items-center justify-between gap-5 text-right text-num-14 text-black font-pelak px-10 py-10 absolute  top-0 left-0  bg-transparent z-10 ">
       {/* Logo */}
       <div className="flex items-center text-left text-[16px] font-inter">
         <Link href="/" className="flex items-center justify-end gap-4 hover:opacity-80 transition-opacity">
