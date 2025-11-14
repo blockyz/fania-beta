@@ -68,3 +68,12 @@ export interface IStatistic {
   value: string;
   label: string;
 }
+
+
+export interface Iinnovation {
+  id: number
+  title: string
+  description: string
+  mainImage: string
+  thumbnail: string
+}

@@ -58,5 +58,9 @@ const FA_DICTIONARY: TDictionary = {
   Event3:"نمایشگاه 3",
   category: 'دسته بندی',
   OurAreasofExpertise: 'حوزه های فعالیت ما',
+
+  // نوآوری 
+   latestInnovation: "آخرین نوآوری ما",
+  inAllFields: "در تمامی حوزه‌های فعالیت"
 }
 export default FA_DICTIONARY
